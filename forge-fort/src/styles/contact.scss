@@ -1,10 +1,29 @@
-#infoFlex {
+#founderFlex {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: center;
     // justify-content: space-around;
     // justify-content: space-evenly;
     // background-color: blue;
     padding: 0 20px;
+
+
+
+    div {
+        display: inline-block;
+    }
+}
+
+
+
+#portrait {
+    max-width: 30vh;
+    display: inline-block;
+}
+
+
+.whyFlex {
+    display: flex;
+    flex-direction: row;
 }
