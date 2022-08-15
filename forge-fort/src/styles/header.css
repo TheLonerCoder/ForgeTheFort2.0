@@ -1,0 +1,47 @@
+body {
+  background-color: #f3f4ed;
+}
+
+#headerNav {
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.logoHeader {
+  margin: 5px;
+}
+
+.logoHeader h1 {
+  border-bottom: solid 3px #c06014;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c06014;
+}
+
+p {
+  margin: 5px;
+}
+/*# sourceMappingURL=header.css.map */

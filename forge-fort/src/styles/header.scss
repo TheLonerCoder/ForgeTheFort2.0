@@ -1,0 +1,52 @@
+// @import './variables/fonts.scss';
+@import './variables/colors.scss';
+
+
+body {
+    background-color: $backgroundColor;
+}
+
+#headerNav {
+    // background-color: blue;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.logoHeader {
+    // background-color: red;
+    margin: 5px;
+
+    h1 {
+        border-bottom: solid 3px $orange;
+
+    }
+}
+
+
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+    
+    &:hover {
+        color: $orange;
+    }
+}
+
+p {
+    margin: 5px;
+}
+
+
