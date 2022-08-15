@@ -8,7 +8,10 @@ import {fadeIn} from 'react-animations';
 
 const fadeAnimation = keyframes `${fadeIn}`;
 const FadeDiv = styled.div `
-  animation: 1s ${fadeAnimation}
+  animation: 1s ${fadeAnimation};
+  margin-top: 150px;
+  margin-right: 10%;
+  margin-left: 10%;
 `
 
 function Contact() {

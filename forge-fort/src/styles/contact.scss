@@ -1,17 +1,31 @@
+@import './variables/colors.scss';
+@import './variables/fonts.scss';
+
+
 #founderFlex {
     display: flex;
     flex-direction: row;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    align-content: center;
     // justify-content: space-around;
     // justify-content: space-evenly;
     // background-color: blue;
+    
     padding: 0 20px;
 
 
 
     div {
         display: inline-block;
+        // padding: 0 60px 0 60px;
+        padding: 0 5%;
+        max-width: 500px;
+    }
+
+    h1 {
+        text-align: left;
     }
 }
 
@@ -20,10 +34,41 @@
 #portrait {
     max-width: 30vh;
     display: inline-block;
+    padding: 0 12px;
 }
 
 
 .whyFlex {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 0 40px;
+    // align-items: center;
+    // background-color: red;
+    // width: 100%;
+    // max-width: 100%;
+    // min-width: 50px;
+
+
+
+    h3 {
+        background-color: $orange;
+        color: white;
+        text-align: left;
+        padding: 5px;
+        font-size: calc(1.3rem + .6vw);
+        font-weight: 500;
+    }
+
+
+    &>div {
+        padding: 0 12px;
+        display: inline-block;
+        max-width: 400px;
+        min-width: 200px;
+        width: 30%;
+        flex-grow: 4;
+    }
 }
