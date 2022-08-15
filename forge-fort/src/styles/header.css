@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
 body {
   background-color: #f3f4ed;
 }
@@ -24,6 +26,13 @@ body {
 
 .logoHeader h1 {
   border-bottom: solid 3px #c06014;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-size: calc(1.375rem + 1.5vw);
+  color: #424642;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 li {
@@ -43,5 +52,9 @@ a:hover {
 
 p {
   margin: 5px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  color: #424642;
+  text-align: left;
 }
 /*# sourceMappingURL=header.css.map */

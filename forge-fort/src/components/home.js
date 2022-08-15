@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import '../styles/home.css';
+import {fadeIn} from 'react-animations';
 
 
 
@@ -15,10 +16,20 @@ const InfoImages = styled.img `
 `
 
 
+// ? Animations
+
+const fadeAnimation = keyframes `${fadeIn}`;
+const FadeDiv = styled.div `
+  animation: 1s ${fadeAnimation}
+`
+
+
+
+
 
 function Home() {
   return (
-    <div>
+    <FadeDiv>
       <div id='homeCara'>
         <img src="/imgs/Unknown/skyline.jpg" alt="skyline FW" id='mainImage'/>
       </div>
@@ -27,7 +38,7 @@ function Home() {
         <div className='infoDiv'>
           <InfoImages src="/imgs/Unknown/education.jpg" alt='education'/>
           <h2>Education</h2>
-          <p>Here, at Forge the Fort, we believe education is a key fundamental into creating thriving economies and entrepreneurial ecosystems. We've partnered with other institutions and organizations to bring you the best education for your specific needs.</p>
+          <p>Here, at <i>Forge the Fort </i>, we believe education is a key fundamental into creating thriving economies and entrepreneurial ecosystems. We've partnered with other institutions and organizations to bring you the best education for your specific needs.</p>
             
         </div>
 
@@ -44,7 +55,7 @@ function Home() {
         </div>
       </div>
     
-    </div>
+    </FadeDiv>
   )
 }
 

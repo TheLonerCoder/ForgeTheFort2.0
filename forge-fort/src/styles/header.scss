@@ -1,4 +1,4 @@
-// @import './variables/fonts.scss';
+@import './variables/fonts.scss';
 @import './variables/colors.scss';
 
 
@@ -22,7 +22,13 @@ body {
 
     h1 {
         border-bottom: solid 3px $orange;
-
+        font-family: $mainFont;
+        letter-spacing: 3px;
+        font-weight: 500;
+        font-size: calc(1.375rem + 1.5vw);
+        color: $grey;
+        text-transform: uppercase;
+        margin-bottom: 8px;
     }
 }
 
@@ -47,6 +53,10 @@ a {
 
 p {
     margin: 5px;
+    font-family: $mainFont;
+    font-weight: lighter;
+    color: $grey;
+    text-align: left;
 }
 
 
