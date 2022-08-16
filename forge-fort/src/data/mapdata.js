@@ -90,6 +90,357 @@ export const mapObject = {
             resources: []
         }
 },
+// ! Illinois
+    "IL" : {
+        id: 'IL',
+        name: 'Illinois',
+        flag: '',
+        cities: {
+            largest: [
+                
+],
+            upcoming:{
+                // API call to get article
+                    cityname: '',
+                    description: '',
+                    pictures: []
+                
+            }
+        },
+        investment: '',
+        gdp: {
+            // charts
+            total: '',
+            capita: '',
+        },
+        industry: {
+            // can use icons to represent industries. include where I got my info from too
+            leading: [], 
+            growing: [],
+        },
+        startups: {
+            number: "",
+            // leading: [],
+            // links
+            resources: []
+        }
+},
+// ! Michigan
+    "MI" : {
+        id: 'MI',
+        name: 'Michigan',
+        flag: '',
+        cities: {
+            largest: [
+                
+],
+            upcoming:{
+                // API call to get article
+                    cityname: '',
+                    description: '',
+                    pictures: []
+                
+            }
+        },
+        investment: '',
+        gdp: {
+            // charts
+            total: '',
+            capita: '',
+        },
+        industry: {
+            // can use icons to represent industries. include where I got my info from too
+            leading: [], 
+            growing: [],
+        },
+        startups: {
+            number: "",
+            // leading: [],
+            // links
+            resources: []
+        }
+},
+// ! Minnesota
+    "MN" : {
+        id: 'MN',
+        name: 'Minnesota',
+        flag: '',
+        cities: {
+            largest: [
+                
+],
+            upcoming:{
+                // API call to get article
+                    cityname: '',
+                    description: '',
+                    pictures: []
+                
+            }
+        },
+        investment: '',
+        gdp: {
+            // charts
+            total: '',
+            capita: '',
+        },
+        industry: {
+            // can use icons to represent industries. include where I got my info from too
+            leading: [], 
+            growing: [],
+        },
+        startups: {
+            number: "",
+            // leading: [],
+            // links
+            resources: []
+        }
+},
+// ! North Dakota
+    "ND" : {
+        id: 'ND',
+        name: 'North Dakota',
+        flag: '',
+        cities: {
+            largest: [
+                
+],
+            upcoming:{
+                // API call to get article
+                    cityname: '',
+                    description: '',
+                    pictures: []
+                
+            }
+        },
+        investment: '',
+        gdp: {
+            // charts
+            total: '',
+            capita: '',
+        },
+        industry: {
+            // can use icons to represent industries. include where I got my info from too
+            leading: [], 
+            growing: [],
+        },
+        startups: {
+            number: "",
+            // leading: [],
+            // links
+            resources: []
+        }
+},
+// ! South Dakota
+    "SD" : {
+        id: 'SD',
+        name: 'South Dakota',
+        flag: '',
+        cities: {
+            largest: [
+                
+],
+            upcoming:{
+                // API call to get article
+                    cityname: '',
+                    description: '',
+                    pictures: []
+                
+            }
+        },
+        investment: '',
+        gdp: {
+            // charts
+            total: '',
+            capita: '',
+        },
+        industry: {
+            // can use icons to represent industries. include where I got my info from too
+            leading: [], 
+            growing: [],
+        },
+        startups: {
+            number: "",
+            // leading: [],
+            // links
+            resources: []
+        }
+},
+// ! Missouri
+    "MO" : {
+        id: 'MO',
+        name: 'Missouri',
+        flag: '',
+        cities: {
+            largest: [
+                
+],
+            upcoming:{
+                // API call to get article
+                    cityname: '',
+                    description: '',
+                    pictures: []
+                
+            }
+        },
+        investment: '',
+        gdp: {
+            // charts
+            total: '',
+            capita: '',
+        },
+        industry: {
+            // can use icons to represent industries. include where I got my info from too
+            leading: [], 
+            growing: [],
+        },
+        startups: {
+            number: "",
+            // leading: [],
+            // links
+            resources: []
+        }
+},
+// ! Kansas 
+    "KS" : {
+        id: 'KS',
+        name: 'Kansas ',
+        flag: '',
+        cities: {
+            largest: [
+                
+],
+            upcoming:{
+                // API call to get article
+                    cityname: '',
+                    description: '',
+                    pictures: []
+                
+            }
+        },
+        investment: '',
+        gdp: {
+            // charts
+            total: '',
+            capita: '',
+        },
+        industry: {
+            // can use icons to represent industries. include where I got my info from too
+            leading: [], 
+            growing: [],
+        },
+        startups: {
+            number: "",
+            // leading: [],
+            // links
+            resources: []
+        }
+},
+// ! Iowa 
+    "IA" : {
+        id: 'IA',
+        name: 'Iowa ',
+        flag: '',
+        cities: {
+            largest: [
+                
+],
+            upcoming:{
+                // API call to get article
+                    cityname: '',
+                    description: '',
+                    pictures: []
+                
+            }
+        },
+        investment: '',
+        gdp: {
+            // charts
+            total: '',
+            capita: '',
+        },
+        industry: {
+            // can use icons to represent industries. include where I got my info from too
+            leading: [], 
+            growing: [],
+        },
+        startups: {
+            number: "",
+            // leading: [],
+            // links
+            resources: []
+        }
+},
+// ! Nebraska
+    "NE" : {
+        id: 'NE',
+        name: 'Nebraska',
+        flag: '',
+        cities: {
+            largest: [
+                
+],
+            upcoming:{
+                // API call to get article
+                    cityname: '',
+                    description: '',
+                    pictures: []
+                
+            }
+        },
+        investment: '',
+        gdp: {
+            // charts
+            total: '',
+            capita: '',
+        },
+        industry: {
+            // can use icons to represent industries. include where I got my info from too
+            leading: [], 
+            growing: [],
+        },
+        startups: {
+            number: "",
+            // leading: [],
+            // links
+            resources: []
+        }
+},
+// ! Wisconsin
+    "WI" : {
+        id: 'WI',
+        name: 'Wisconsin',
+        flag: '',
+        cities: {
+            largest: [
+                
+],
+            upcoming:{
+                // API call to get article
+                    cityname: '',
+                    description: '',
+                    pictures: []
+                
+            }
+        },
+        investment: '',
+        gdp: {
+            // charts
+            total: '',
+            capita: '',
+        },
+        industry: {
+            // can use icons to represent industries. include where I got my info from too
+            leading: [], 
+            growing: [],
+        },
+        startups: {
+            number: "",
+            // leading: [],
+            // links
+            resources: []
+        }
+},
+
 
     
 }
