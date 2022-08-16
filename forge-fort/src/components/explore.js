@@ -17,13 +17,30 @@ const FadeDiv = styled.div `
 `
 
 
+
+
+
+
 function Explore() {
 
   const [stateID, renderID] = useState();
   const [stateName, renderName] = useState('test');
   const mapRef = useRef(null);
   
-
+  const mapColors = {
+    OH: '#432771', 
+    IN: '#f7bc17', 
+    IL: '#53b35a', 
+    MO: '#1aa9a9', 
+    MI: '#625d59', 
+    KS: '#e9565e', 
+    NE: '#a3ce65', 
+    IA: '#8f7d71', 
+    SD: '#f7bc17', 
+    WI: '#e3595e', 
+    ND: '#246cb6', 
+    MN: '#7f4f99', 
+  }
   
   
   // ? Gets ID of clicked state and returns data
@@ -31,21 +48,13 @@ function Explore() {
     const theID = e.target.id ;
     // ^ Saves clicked id into a variable and uses that variable as a keypoint in the mapObject to access the data
     renderID(theID);
-    renderName(mapObject[theID].name)
-    // console.log(mapRef.current.id)
-    // console.log(`Before ${stateName}`);
-    // renderID(e.target.id);
-    // console.log(theID)
-    // console.log(mapObject[theID])
-    // console.log(mapObject[theID].name)
-    // console.log(e.target.id);
-    // renderName(mapObject[theID]);
-    // console.log(mapObject[stateID]);
-    // renderName(mapObject[stateID].name);
-    // console.log(`After: ${stateName}`);
+    renderName(mapObject[theID].name);
 
+    e.target.style.fill = mapColors[theID];
+    console.log(mapColors);
+    // console.log(typeof(theID))
+    console.log(mapColors[theID]);
     
-    // renderState(stateID.name)
     
 
   }
