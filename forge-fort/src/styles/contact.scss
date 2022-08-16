@@ -71,4 +71,16 @@
         width: 30%;
         flex-grow: 4;
     }
+
+
+
+    ol {
+        padding: 0 10px;
+
+        li {
+            color: $grey;
+            text-align: left;
+            margin-bottom: 8px;
+        }
+    }
 }

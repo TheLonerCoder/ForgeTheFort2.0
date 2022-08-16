@@ -1,8 +1,11 @@
 import React from 'react'
+import MidwestMap from './MidwestMap'
 
 function Explore() {
   return (
-    <div>Explore</div>
+    <div>
+      <MidwestMap />
+    </div>
   )
 }
 

@@ -73,4 +73,14 @@
       -ms-flex-positive: 4;
           flex-grow: 4;
 }
+
+.whyFlex ol {
+  padding: 0 10px;
+}
+
+.whyFlex ol li {
+  color: #424642;
+  text-align: left;
+  margin-bottom: 8px;
+}
 /*# sourceMappingURL=contact.css.map */

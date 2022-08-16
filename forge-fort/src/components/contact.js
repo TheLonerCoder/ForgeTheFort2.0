@@ -38,11 +38,11 @@ function Contact() {
             <h3>Goals</h3>
             <p>I'll have regularly updates on what I plan on doing on Youtube and on here. They include, but are not limited to:</p>
             <ol>
-              <li>Updating the "Explore", "Blog", and "Resources" pages</li>
-              <li>Add more funtionality to the home page. For example, I want a feature where when you hover on the bottom cards, they expand with more information and links</li>
-              <li>Adding detailed plans to this page (like pictures)</li>
-              <li>Incoporate versions ✔️</li>
-              <li>Host the website with a domain name ✔️</li>
+              <li>1. Updating the "Explore", "Blog", and "Resources" pages</li>
+              <li>2. Add more funtionality to the home page. For example, I want a feature where when you hover on the bottom cards, they expand with more information and links</li>
+              <li>3. Adding detailed plans to this page (like pictures)</li>
+              <li> 4. Incoporate versions ✔️</li>
+              <li>5. Host the website with a domain name ✔️</li>
             </ol>
           </div>
 
