@@ -61,3 +61,53 @@ p {
 }
 
 
+
+#headerListHamburger {
+    display: none;
+}
+
+
+// ! Media Queries
+
+// ? Turns page links into hamburger menu
+@media (max-width: 597px) {
+    #headerList {
+        display: none;
+    }
+
+    #headerListHamburger {
+        display: inline-block;
+        
+
+
+        svg {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+
+        button {
+            // background-color: ;
+            border: none;
+            background-color: $backgroundColor;
+        }
+
+
+        li {
+            display: block;
+            background: rgba($color: $grey, $alpha: 0.6);
+            padding: 5px;
+            
+
+            a {color: white;}
+        }
+
+        #hamDiv {
+            position: absolute;
+            border-radius: 50px;
+
+        }
+    }
+}
+

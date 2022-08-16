@@ -4,6 +4,10 @@
   width: 30vw;
   max-width: 400px;
   background-color: #424642;
+  min-width: 300px;
+  margin-bottom: 20px;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-shadow: 1px 5px 4px black;
           box-shadow: 1px 5px 4px black;
 }

@@ -58,4 +58,36 @@ p {
   color: #424642;
   text-align: left;
 }
+
+#headerListHamburger {
+  display: none;
+}
+
+@media (max-width: 597px) {
+  #headerList {
+    display: none;
+  }
+  #headerListHamburger {
+    display: inline-block;
+  }
+  #headerListHamburger svg:hover {
+    cursor: pointer;
+  }
+  #headerListHamburger button {
+    border: none;
+    background-color: #f3f4ed;
+  }
+  #headerListHamburger li {
+    display: block;
+    background: rgba(66, 70, 66, 0.6);
+    padding: 5px;
+  }
+  #headerListHamburger li a {
+    color: white;
+  }
+  #headerListHamburger #hamDiv {
+    position: absolute;
+    border-radius: 50px;
+  }
+}
 /*# sourceMappingURL=header.css.map */
