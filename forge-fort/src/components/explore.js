@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import MidwestMap from './MidwestMap';
 import '../styles/map.css';
+import '../styles/mapcontent.css';
 import styled, {keyframes} from 'styled-components';
 import {fadeIn} from 'react-animations';
 import { mapObject } from '../data/mapdata';
@@ -35,6 +36,8 @@ function Explore() {
 
   const [stateID, renderID] = useState();
   const [stateName, renderName] = useState('test');
+  const [flag, changeFlag] = useState();
+  const [cities, renderCity] = useState([]);
   const mapRef = useRef(null);
   
   const mapColors = {
@@ -62,11 +65,12 @@ function Explore() {
 
     clearMap();
 
-
     e.target.style.fill = mapColors[theID];
     // ^ Map changes color on click
 
-
+    changeFlag(mapObject[theID].flag);
+    
+    renderCity(mapObject[theID].cities.largest);
     
     
 
@@ -74,15 +78,27 @@ function Explore() {
 
   return (
     <FadeDiv id='explore'>
+
+      <div id='name'>
+        <div><img src={flag} alt="flag" /></div>
+        <h2><span id="state">State:</span> {stateName}</h2>
+      </div>
+
       <div id='mapDiv' onClick={getIdClicked} ref={mapRef}>
         <MidwestMap />
 
       </div>
 
     <div id='mapContent'>
-      <div>ID: {stateID}</div>
-      <div>Name: {stateName}</div>
-      <div>Flag + name</div>
+      {/* <div>ID: {stateID}</div> */}
+
+      <div>
+        <h3>Largest Cities</h3>
+        <ul>
+            {cities.map(item => {return <li>{item}</li>})}
+        </ul>
+      </div>
+      
       <div>Largest cities + hightlights</div>
       <div>Private investment</div>
       <div>GDP</div>

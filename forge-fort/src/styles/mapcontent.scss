@@ -1,0 +1,18 @@
+@import './variables/colors.scss';
+@import './variables/fonts.scss';
+
+
+#name {
+    display: flex;
+    flex-direction: row;
+
+    h2 {
+        color: white;
+        border-radius: 10px;
+    }
+
+
+    // #state {
+
+    // }
+}

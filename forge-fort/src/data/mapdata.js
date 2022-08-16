@@ -6,7 +6,7 @@ export const mapObject = {
     "OH" : {
         id: 'OH',
         name: 'Ohio',
-        flag: '',
+        flag: '/imgs/Flags/oh-flag.png',
         cities: {
             largest: [
                 "Columbus (921,605)",
