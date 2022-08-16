@@ -17,6 +17,16 @@ const FadeDiv = styled.div `
 `
 
 
+// ? Clear map function
+const idArray = ['OH', "IN", "IL", "MI", "MN", "ND", "SD", "MO", "KS", "IA", "NE", "WI"];
+
+function clearMap () {
+
+    for (let i = 0; i < idArray.length; i++) {
+      document.getElementById(idArray[i]).style = null;
+    }
+
+}
 
 
 
@@ -50,10 +60,13 @@ function Explore() {
     renderID(theID);
     renderName(mapObject[theID].name);
 
+    clearMap();
+
+
     e.target.style.fill = mapColors[theID];
-    console.log(mapColors);
-    // console.log(typeof(theID))
-    console.log(mapColors[theID]);
+    // ^ Map changes color on click
+
+
     
     
 
@@ -61,8 +74,8 @@ function Explore() {
 
   return (
     <FadeDiv id='explore'>
-      <div id='mapDiv' onClick={getIdClicked}>
-        <MidwestMap ref={mapRef}/>
+      <div id='mapDiv' onClick={getIdClicked} ref={mapRef}>
+        <MidwestMap />
 
       </div>
 
