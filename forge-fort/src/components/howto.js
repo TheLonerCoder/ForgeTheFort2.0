@@ -17,7 +17,7 @@ function Howto() {
     <div id='howto' style={visible}>    
         <div id='exitDiv'>
             <h2>Tutorial</h2>
-            <button><Exit size={'2rem'}/></button>    
+            <button onClick={hideBox}><Exit size={'2rem'}/></button>    
         </div>    
 
     <div id='howtoContent'>
