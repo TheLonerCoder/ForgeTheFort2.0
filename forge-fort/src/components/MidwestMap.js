@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import '../styles/map.css'
 
 function MidwestMap() {
   return (
-    <div>
+    <div id='map'>
          <svg
       xmlns="http://www.w3.org/2000/svg"
       id="svg2275"

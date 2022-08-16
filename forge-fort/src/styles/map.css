@@ -1,0 +1,56 @@
+#map svg {
+  fill: black;
+}
+
+#map #OH, #map #IN, #map #IL, #map #MI, #map #MN, #map #ND, #map #SD, #map #MO, #map #KS, #map #IA, #map #NE, #map #WI {
+  fill: #aaaaaa;
+}
+
+#map #OH:hover {
+  fill: #432771;
+}
+
+#map #IN:hover {
+  fill: #f7bc17;
+}
+
+#map #IL:hover {
+  fill: #53b35a;
+}
+
+#map #MO:hover {
+  fill: #1aa9a9;
+}
+
+#map #MI:hover {
+  fill: #625d59;
+}
+
+#map #KS:hover {
+  fill: #e9565e;
+}
+
+#map #NE:hover {
+  fill: #a3ce65;
+}
+
+#map #IA:hover {
+  fill: #8f7d71;
+}
+
+#map #SD:hover {
+  fill: #f7bc17;
+}
+
+#map #WI:hover {
+  fill: #e3595e;
+}
+
+#map #ND:hover {
+  fill: #246cb6;
+}
+
+#map #MN:hover {
+  fill: #7f4f99;
+}
+/*# sourceMappingURL=map.css.map */
