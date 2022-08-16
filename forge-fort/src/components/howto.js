@@ -1,6 +1,20 @@
 import React, {useState} from 'react';
 import { IoCloseOutline as Exit, IoCaretBackSharp as LeftArrow, IoCaretForwardSharp as RightArrow } from "react-icons/io5";
 import '../styles/howto.css';
+import styled, {keyframes} from 'styled-components';
+import { bounce, pulse, heartBeat, rubberBand } from 'react-animations';
+
+
+
+// ? Animations
+const bounceAnimation = keyframes`${rubberBand}`;
+
+const PulseDiv = styled.div`
+  transition-delay: 5s;
+  animation: 2s ${bounceAnimation};
+`;
+
+
 
 
 function Howto() {
@@ -14,7 +28,7 @@ function Howto() {
 
 
   return (
-    <div id='howto' style={visible}>    
+    <PulseDiv id='howto' style={visible}>    
         <div id='exitDiv'>
             <h2>Tutorial</h2>
             <button onClick={hideBox}><Exit size={'2rem'}/></button>    
@@ -27,7 +41,7 @@ function Howto() {
         </div>
     <div className='arrows'><RightArrow size={'1.5rem'}/></div>
     </div>
-    </div>
+    </PulseDiv>
   )
 }
 
