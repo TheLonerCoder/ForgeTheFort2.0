@@ -53,6 +53,7 @@
   color: white;
   background: rgba(0, 0, 0, 0);
   margin-right: auto;
+  font-weight: normal;
 }
 
 #howto svg {
@@ -61,7 +62,7 @@
 
 #howto svg:hover {
   cursor: pointer;
-  color: lightgray;
+  color: gray;
 }
 
 #howto p {

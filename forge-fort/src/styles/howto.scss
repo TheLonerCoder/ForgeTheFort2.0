@@ -39,6 +39,8 @@
         color: white;
         background: rgba($color: #000000, $alpha: 0);
         margin-right: auto;
+        font-weight: normal;
+        // letter-spacing: 3;
     }
 
     svg {
@@ -46,7 +48,7 @@
 
         &:hover {
             cursor: pointer;
-            color: lightgray;
+            color: darken($color: white, $amount: 50);
         }
     }
     

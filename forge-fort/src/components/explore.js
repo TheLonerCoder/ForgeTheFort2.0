@@ -3,7 +3,7 @@ import MidwestMap from './MidwestMap';
 import '../styles/map.css';
 import '../styles/mapcontent.css';
 import styled, {keyframes} from 'styled-components';
-import {fadeIn} from 'react-animations';
+import {fadeIn, fadeInLeft, zoomIn} from 'react-animations';
 import { mapObject } from '../data/mapdata';
 import Howto from './howto';
 
@@ -16,6 +16,14 @@ const FadeDiv = styled.div `
   margin-top: 150px;
   margin-right: 10%;
   margin-left: 10%;
+`
+
+const fadeLeftAnimation = keyframes `${zoomIn}`;
+const FadeLeftDiv = styled.div `
+  animation: 1s ${fadeLeftAnimation};
+  ${'' /* margin-top: 150px;
+  margin-right: 10%;
+  margin-left: 10%; */}
 `
 
 
@@ -35,6 +43,8 @@ function clearMap () {
 
 function Explore() {
 
+  const [mapContentVisibility, changeMapContentVisibility] = useState({display: 'none'});
+  const [tutorialVisibility, changeTutorialVisibility] = useState();
   const [stateID, renderID] = useState();
   const [stateName, renderName] = useState('test');
   const [flag, changeFlag] = useState();
@@ -59,6 +69,11 @@ function Explore() {
   
   // ? Gets ID of clicked state and returns data
   function getIdClicked (e) {
+
+    changeMapContentVisibility({display: 'inline-block'});
+    changeTutorialVisibility({display: 'none'});
+
+
     const theID = e.target.id ;
     // ^ Saves clicked id into a variable and uses that variable as a keypoint in the mapObject to access the data
     renderID(theID);
@@ -80,21 +95,24 @@ function Explore() {
   return (
     <FadeDiv id='explore'>
 
-      <div id='howToBox'>
+      <div id='howToBox' style={tutorialVisibility}>
         <Howto />
       </div>
 
-      <div id='name'>
-        <div><img src={flag} alt="flag" /></div>
-        <h2><span id="state">State:</span> {stateName}</h2>
-      </div>
+      <FadeLeftDiv style={mapContentVisibility}>
+        <div id='name'>
+          <div><img src={flag} alt="flag" /></div>
+          <h2><span id="state">State:</span> {stateName}</h2>
+        </div>
+
+      </FadeLeftDiv>
 
       <div id='mapDiv' onClick={getIdClicked} ref={mapRef}>
         <MidwestMap />
 
       </div>
 
-    <div id='mapContent'>
+    <FadeLeftDiv id='mapContent' style={mapContentVisibility}>
       {/* <div>ID: {stateID}</div> */}
 
       <div>
@@ -109,7 +127,7 @@ function Explore() {
       <div>GDP</div>
       <div>Industries</div>
       <div></div>
-    </div>
+    </FadeLeftDiv>
     </FadeDiv>
   )
 }
