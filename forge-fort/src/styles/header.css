@@ -65,7 +65,7 @@ p {
   display: none;
 }
 
-@media (max-width: 597px) {
+@media (max-width: 620px) {
   #headerList {
     display: none;
   }
@@ -87,6 +87,9 @@ p {
     display: block;
     background: rgba(66, 70, 66, 0.6);
     padding: 5px;
+  }
+  #headerListHamburger li:hover {
+    background: rgba(66, 70, 66, 0.8);
   }
   #headerListHamburger li a {
     color: white;

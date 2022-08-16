@@ -72,7 +72,7 @@ p {
 // ! Media Queries
 
 // ? Turns page links into hamburger menu
-@media (max-width: 597px) {
+@media (max-width: 620px) {
     #headerList {
         display: none;
     }
@@ -107,8 +107,15 @@ p {
             background: rgba($color: $grey, $alpha: 0.6);
             padding: 5px;
             
+            &:hover {
+                background: rgba($color: $grey, $alpha: 0.8);
+            }
 
-            a {color: white;}
+            a {
+                color: white;
+
+
+            }
 
 
             
