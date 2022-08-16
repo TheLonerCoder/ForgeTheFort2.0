@@ -1,18 +1,44 @@
 #explore {
     // background-color: red;
+    display: flex;
+    flex-direction: column;
 
 }
 
 
+#mapDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // scale: 2;
+    height: 700px;
+}
+
+// #mapContent {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+
 #map {
     svg {
-        fill: black;
+        // fill: black;
+        // width: 100%;
+        // width: 100vw;
+        scale: 2;
     }
 
 
     #OH, #IN, #IL, #MI, #MN, #ND, #SD, #MO, #KS, #IA, #NE, #WI  {
         // fill: #cccccc;
         fill: #aaaaaa;
+
+        &:hover {
+            cursor: pointer;
+        }
       }
 
 

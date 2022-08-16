@@ -19,9 +19,21 @@ const FadeDiv = styled.div `
 function Explore() {
   return (
     <FadeDiv id='explore'>
-      <MidwestMap />
+      <div id='mapDiv'>
+        <MidwestMap />
+
+      </div>
+
+    <div id='mapContent'>
+      <div>Flag + name</div>
+      <div>Largest cities + hightlights</div>
+      <div>Private investment</div>
+      <div>GDP</div>
+      <div>Industries</div>
+      <div></div>
+    </div>
     </FadeDiv>
   )
 }
 
-export default Explore
+export default Explore;

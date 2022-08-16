@@ -1,9 +1,40 @@
+#explore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#mapDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 700px;
+}
+
 #map svg {
-  fill: black;
+  scale: 2;
 }
 
 #map #OH, #map #IN, #map #IL, #map #MI, #map #MN, #map #ND, #map #SD, #map #MO, #map #KS, #map #IA, #map #NE, #map #WI {
   fill: #aaaaaa;
+}
+
+#map #OH:hover, #map #IN:hover, #map #IL:hover, #map #MI:hover, #map #MN:hover, #map #ND:hover, #map #SD:hover, #map #MO:hover, #map #KS:hover, #map #IA:hover, #map #NE:hover, #map #WI:hover {
+  cursor: pointer;
 }
 
 #map #OH:hover {
