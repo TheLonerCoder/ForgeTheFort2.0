@@ -1,3 +1,61 @@
+@import './variables/colors.scss';
+@import './variables/fonts.scss';
+
+
 #howto {
-    background: red;
+    background: rgba($color: $grey, $alpha: 0.8);
+    width: 50%;
+    max-width: 500px;
+    min-width: 250px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+
+
+    #howtoContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+
+    #exitDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+
+        button {
+            background: rgba($color: #000000, $alpha: 0);
+            border: none;
+        }
+    }
+
+    h2 {
+        color: white;
+        background: rgba($color: #000000, $alpha: 0);
+        margin-right: auto;
+    }
+
+    svg {
+        color: white;
+
+        &:hover {
+            cursor: pointer;
+            color: lightgray;
+        }
+    }
+    
+    p {
+        color: white;
+        font-weight: lighter;
+    }
+
+    // .arrows {
+
+    //     svg {
+    //         size: 2;
+    //     }
+    // }
 }

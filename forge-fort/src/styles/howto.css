@@ -1,4 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
 #howto {
-  background: red;
+  background: rgba(66, 70, 66, 0.8);
+  width: 50%;
+  max-width: 500px;
+  min-width: 250px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#howto #howtoContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#howto #exitDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#howto #exitDiv button {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+#howto h2 {
+  color: white;
+  background: rgba(0, 0, 0, 0);
+  margin-right: auto;
+}
+
+#howto svg {
+  color: white;
+}
+
+#howto svg:hover {
+  cursor: pointer;
+  color: lightgray;
+}
+
+#howto p {
+  color: white;
+  font-weight: lighter;
 }
 /*# sourceMappingURL=howto.css.map */

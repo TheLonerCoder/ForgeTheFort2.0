@@ -5,6 +5,7 @@ import '../styles/mapcontent.css';
 import styled, {keyframes} from 'styled-components';
 import {fadeIn} from 'react-animations';
 import { mapObject } from '../data/mapdata';
+import Howto from './howto';
 
 
 // ? Animations
@@ -78,6 +79,8 @@ function Explore() {
 
   return (
     <FadeDiv id='explore'>
+
+      <Howto />
 
       <div id='name'>
         <div><img src={flag} alt="flag" /></div>
