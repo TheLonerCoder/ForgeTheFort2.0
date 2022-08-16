@@ -26,6 +26,8 @@
 
     h1 {
         text-align: left;
+        // font-family: $mainFont;
+        color: lighten($color: black, $amount: 30);
     }
 }
 
@@ -81,6 +83,7 @@
             color: $grey;
             text-align: left;
             margin-bottom: 8px;
+            display: block;
         }
     }
 }

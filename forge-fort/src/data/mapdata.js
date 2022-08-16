@@ -1,8 +1,8 @@
 // import '/imgs/'
 
 
-export const mapObject = [
-    {
+export const mapObject = {
+    "OH" : {
         id: 'OH',
         name: 'Ohio',
         flag: '',
@@ -47,7 +47,7 @@ export const mapObject = [
 },
 
     
-]
+}
 
 
 

@@ -46,6 +46,8 @@ li {
 a {
     color: black;
     text-decoration: none;
+    padding: 8px;
+    font-weight: 400;
     
     &:hover {
         color: $orange;
@@ -83,6 +85,7 @@ p {
         svg {
             &:hover {
                 cursor: pointer;
+                // color: white;
             }
         }
 
@@ -91,6 +94,11 @@ p {
             // background-color: ;
             border: none;
             background-color: $backgroundColor;
+
+            &:hover {
+                background: rgba($color: $orange, $alpha: 0.2);
+                border-radius: 50%;
+            }
         }
 
 
@@ -101,6 +109,9 @@ p {
             
 
             a {color: white;}
+
+
+            
         }
 
         #hamDiv {

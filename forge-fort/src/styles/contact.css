@@ -29,6 +29,7 @@
 
 #founderFlex h1 {
   text-align: left;
+  color: #4d4d4d;
 }
 
 #portrait {
@@ -82,5 +83,6 @@
   color: #424642;
   text-align: left;
   margin-bottom: 8px;
+  display: block;
 }
 /*# sourceMappingURL=contact.css.map */
