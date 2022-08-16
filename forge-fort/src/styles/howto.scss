@@ -50,12 +50,15 @@
     p {
         color: white;
         font-weight: lighter;
+        padding: 5px 10px;
     }
 
-    // .arrows {
+    .arrows {
 
-    //     svg {
-    //         size: 2;
-    //     }
-    // }
+        svg {
+            &:hover {
+                cursor: not-allowed;
+            }
+        }
+    }
 }

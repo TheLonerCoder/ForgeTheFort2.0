@@ -64,5 +64,10 @@
 #howto p {
   color: white;
   font-weight: lighter;
+  padding: 5px 10px;
+}
+
+#howto .arrows svg:hover {
+  cursor: not-allowed;
 }
 /*# sourceMappingURL=howto.css.map */

@@ -5,7 +5,7 @@ import '../styles/howto.css';
 
 function Howto() {
 
-    const [page, changePage] = useState();
+    const [page, changePage] = useState(<HowtoUse1 />);
     const [visible, hideVisibility] = useState({display: 'block'})
 
     function hideBox () {
@@ -35,7 +35,9 @@ function Howto() {
 function HowtoUse1 () {
     return (
         <div>
-            <p>Welcome. </p>
+            <p>Welcome. This app hopes to give you a brief overview of the economic/business climate here in the midwest.</p>
+
+            <p>Simply click on a state to get started.</p>
         </div>
     )
 }
@@ -45,7 +47,7 @@ function HowtoUse1 () {
 function HowtoUse2 () {
     return (
         <div>
-
+            <p>Here</p>
         </div>
     )
 }

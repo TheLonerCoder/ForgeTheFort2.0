@@ -80,7 +80,9 @@ function Explore() {
   return (
     <FadeDiv id='explore'>
 
-      <Howto />
+      <div id='howToBox'>
+        <Howto />
+      </div>
 
       <div id='name'>
         <div><img src={flag} alt="flag" /></div>
