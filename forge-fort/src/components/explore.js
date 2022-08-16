@@ -19,19 +19,34 @@ const FadeDiv = styled.div `
 
 function Explore() {
 
-  const [stateName, renderState] = useState();
+  const [stateID, renderID] = useState();
+  const [stateName, renderName] = useState('test');
   const mapRef = useRef(null);
+  
 
-
+  
+  
   // ? Gets ID of clicked state and returns data
   function getIdClicked (e) {
+    const theID = e.target.id ;
+    // ^ Saves clicked id into a variable and uses that variable as a keypoint in the mapObject to access the data
+    renderID(theID);
+    renderName(mapObject[theID].name)
     // console.log(mapRef.current.id)
-    renderState(e.target.id);
-    console.log(e.target.id)
+    // console.log(`Before ${stateName}`);
+    // renderID(e.target.id);
+    // console.log(theID)
+    // console.log(mapObject[theID])
+    // console.log(mapObject[theID].name)
+    // console.log(e.target.id);
+    // renderName(mapObject[theID]);
+    // console.log(mapObject[stateID]);
+    // renderName(mapObject[stateID].name);
+    // console.log(`After: ${stateName}`);
 
-    for (const [key, value] of Object.entries(mapObject)) {
-      console.log(key)
-    }
+    
+    // renderState(stateID.name)
+    
 
   }
 
@@ -43,7 +58,8 @@ function Explore() {
       </div>
 
     <div id='mapContent'>
-      <div>{stateName}</div>
+      <div>ID: {stateID}</div>
+      <div>Name: {stateName}</div>
       <div>Flag + name</div>
       <div>Largest cities + hightlights</div>
       <div>Private investment</div>
