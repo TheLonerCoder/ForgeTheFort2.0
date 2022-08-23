@@ -5,13 +5,31 @@
 #name {
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     h2 {
         color: white;
         border-radius: 10px;
+        background-color: white;
+        color: $grey;
+        border: 1px solid $orange;
+        // padding: 0;
+        padding-left: 0;
+
+        #state {
+            background-color: $orange;
+            color: white;
+            border-radius: 10px;
+            padding: 1px;
+            padding-left: 10px;
+            margin: 0;
+        }
     }
 
-
+    img {
+        margin-right: 10px;
+        // display: inline-block;
+    }
     // #state {
 
     // }

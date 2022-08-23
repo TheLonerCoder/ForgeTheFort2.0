@@ -8,11 +8,31 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #name h2 {
   color: white;
   border-radius: 10px;
+  background-color: white;
+  color: #424642;
+  border: 1px solid #c06014;
+  padding-left: 0;
+}
+
+#name h2 #state {
+  background-color: #c06014;
+  color: white;
+  border-radius: 10px;
+  padding: 1px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+#name img {
+  margin-right: 10px;
 }
 
 #howToBox {

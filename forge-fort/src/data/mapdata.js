@@ -50,7 +50,7 @@ export const mapObject = {
     "IN" : {
         id: 'IN',
         name: 'Indiana',
-        flag: '',
+        flag: '/imgs/Flags/in-flag.png',
         cities: {
             largest: [
                 "Columbus (921,605)",
@@ -94,7 +94,7 @@ export const mapObject = {
     "IL" : {
         id: 'IL',
         name: 'Illinois',
-        flag: '',
+        flag: '/imgs/Flags/il-flag.png',
         cities: {
             largest: [
                 
@@ -129,7 +129,7 @@ export const mapObject = {
     "MI" : {
         id: 'MI',
         name: 'Michigan',
-        flag: '',
+        flag: '/imgs/Flags/mi-flag.png',
         cities: {
             largest: [
                 
@@ -164,7 +164,7 @@ export const mapObject = {
     "MN" : {
         id: 'MN',
         name: 'Minnesota',
-        flag: '',
+        flag: '/imgs/Flags/mn-flag.png',
         cities: {
             largest: [
                 
@@ -199,7 +199,7 @@ export const mapObject = {
     "ND" : {
         id: 'ND',
         name: 'North Dakota',
-        flag: '',
+        flag: '/imgs/Flags/nd-flag.png',
         cities: {
             largest: [
                 
@@ -234,7 +234,7 @@ export const mapObject = {
     "SD" : {
         id: 'SD',
         name: 'South Dakota',
-        flag: '',
+        flag: '/imgs/Flags/sd-flag.png',
         cities: {
             largest: [
                 
@@ -269,7 +269,7 @@ export const mapObject = {
     "MO" : {
         id: 'MO',
         name: 'Missouri',
-        flag: '',
+        flag: '/imgs/Flags/mo-flag.png',
         cities: {
             largest: [
                 
@@ -304,7 +304,7 @@ export const mapObject = {
     "KS" : {
         id: 'KS',
         name: 'Kansas ',
-        flag: '',
+        flag: '/imgs/Flags/ks-flag.png',
         cities: {
             largest: [
                 
@@ -339,7 +339,7 @@ export const mapObject = {
     "IA" : {
         id: 'IA',
         name: 'Iowa ',
-        flag: '',
+        flag: '/imgs/Flags/ia-flag.png',
         cities: {
             largest: [
                 
@@ -374,7 +374,7 @@ export const mapObject = {
     "NE" : {
         id: 'NE',
         name: 'Nebraska',
-        flag: '',
+        flag: '/imgs/Flags/ne-flag.png',
         cities: {
             largest: [
                 
@@ -409,7 +409,7 @@ export const mapObject = {
     "WI" : {
         id: 'WI',
         name: 'Wisconsin',
-        flag: '',
+        flag: '/imgs/Flags/wi-flag.png',
         cities: {
             largest: [
                 

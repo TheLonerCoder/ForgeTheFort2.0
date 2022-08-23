@@ -101,7 +101,7 @@ function Explore() {
 
       <FadeLeftDiv style={mapContentVisibility}>
         <div id='name'>
-          <div><img src={flag} alt="flag" /></div>
+          <img src={flag} alt="flag" />
           <h2><span id="state">State:</span> {stateName}</h2>
         </div>
 
