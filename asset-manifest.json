@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/ForgeTheFort2.0/static/css/main.4aad27fe.css",
-    "main.js": "/ForgeTheFort2.0/static/js/main.856485f3.js",
+    "main.js": "/ForgeTheFort2.0/static/js/main.b3a46d48.js",
     "static/js/787.efa08513.chunk.js": "/ForgeTheFort2.0/static/js/787.efa08513.chunk.js",
     "static/media/logo.svg": "/ForgeTheFort2.0/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/ForgeTheFort2.0/index.html",
     "main.4aad27fe.css.map": "/ForgeTheFort2.0/static/css/main.4aad27fe.css.map",
-    "main.856485f3.js.map": "/ForgeTheFort2.0/static/js/main.856485f3.js.map",
+    "main.b3a46d48.js.map": "/ForgeTheFort2.0/static/js/main.b3a46d48.js.map",
     "787.efa08513.chunk.js.map": "/ForgeTheFort2.0/static/js/787.efa08513.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4aad27fe.css",
-    "static/js/main.856485f3.js"
+    "static/js/main.b3a46d48.js"
   ]
 }
