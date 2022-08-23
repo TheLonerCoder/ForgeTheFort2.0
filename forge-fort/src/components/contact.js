@@ -18,7 +18,7 @@ function Contact() {
   return (
     <FadeDiv>
         <div id="founderFlex">
-          <img src="/imgs/Unknown/portrait-edit.png" alt="potrait" id='portrait'/>
+          <img src="ForgeTheFort2.0/imgs/Unknown/portrait-edit.png" alt="potrait" id='portrait'/>
           <div id="test">
 
           <h1>Meet the founder</h1>
