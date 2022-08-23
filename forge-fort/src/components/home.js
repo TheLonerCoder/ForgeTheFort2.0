@@ -11,7 +11,7 @@ import {fadeIn} from 'react-animations';
 
 const InfoImages = styled.img `
   width: 100%;
-  ${'' /* height: 150px; */}
+
 
 `
 
@@ -30,6 +30,8 @@ const FadeDiv = styled.div `
 function Home() {
   return (
     <FadeDiv>
+        <h1>Test</h1>
+
       <div id='homeCara'>
         <img src="ForgeTheFort2.0/imgs/Unknown/skyline.jpg" alt="skyline FW" id='mainImage'/>
       </div>
