@@ -56,7 +56,7 @@ function App() {
 
           <ul id='headerList'>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/home">Home</Link>
             </li>
             <li>
               <Link to="/explore">Explore</Link>
@@ -75,7 +75,7 @@ function App() {
 
             <div style={menu} id="hamDiv">
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/home">Home</Link>
               </li>
               <li>
                 <Link to="/explore">Explore</Link>
@@ -89,7 +89,7 @@ function App() {
 
 
         <Routes>
-          <Route path='/' element={<Home />}/>
+          <Route path='/home' element={<Home />}/>
           <Route path='/about' element={<Contact />}/>
           <Route path='/explore' element={<Explore />}/>
           <Route path="*" element={<Home />}/>

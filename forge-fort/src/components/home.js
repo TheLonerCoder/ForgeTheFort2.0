@@ -31,7 +31,7 @@ function Home() {
   return (
     <FadeDiv>
       <div id='homeCara'>
-        <img src="/imgs/Unknown/skyline.jpg" alt="skyline FW" id='mainImage'/>
+        <img src="ForgeTheFort2.0/imgs/Unknown/skyline.jpg" alt="skyline FW" id='mainImage'/>
       </div>
     
       <div id='infoFlex'>
