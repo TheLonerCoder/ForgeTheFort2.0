@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useState, useRef} from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import Home from './components/home';
 import Contact from './components/contact';
 import Explore from './components/explore';
@@ -92,7 +92,8 @@ function App() {
           <Route path='/home' element={<Home />}/>
           <Route path='/about' element={<Contact />}/>
           <Route path='/explore' element={<Explore />}/>
-          <Route path="*" element={<Home />}/>
+          {/* <Route path="*" element={<Home />}/> */}
+          <Route path='*' element={<Navigate to='/home'/>}/>
         </Routes>
     </div>
   );

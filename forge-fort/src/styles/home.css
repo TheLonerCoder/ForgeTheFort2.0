@@ -40,11 +40,53 @@ h2 {
   font-weight: normal;
 }
 
+#homeCara {
+  position: relative;
+}
+
+#homeCara:hover img {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+#homeCara:hover #exploreDiv {
+  display: inline;
+}
+
 #homeCara img {
   width: 95%;
   min-width: 100px;
   max-width: 1250px;
   margin: 20px 20px 50px 20px;
+}
+
+#homeCara #exploreButton {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px rgba(255, 255, 255, 0.5) solid;
+  border-radius: 10px;
+  color: white;
+}
+
+#homeCara #exploreButton:hover {
+  background-color: rgba(192, 96, 20, 0.5);
+}
+
+#exploreDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+#exploreDiv h2 {
+  padding: 12px 10px;
+  background-color: rgba(192, 96, 20, 0);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  font-style: italic;
 }
 
 #infoFlex {

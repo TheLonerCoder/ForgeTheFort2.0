@@ -2,6 +2,7 @@ import React from 'react';
 import styled, {keyframes} from 'styled-components';
 import '../styles/home.css';
 import {fadeIn} from 'react-animations';
+import { Link } from 'react-router-dom';
 
 
 
@@ -30,10 +31,17 @@ const FadeDiv = styled.div `
 function Home() {
   return (
     <FadeDiv>
-        <h1>Test</h1>
+        {/* <h1>Test</h1> */}
 
       <div id='homeCara'>
         <img src="ForgeTheFort2.0/imgs/Unknown/skyline.jpg" alt="skyline FW" id='mainImage'/>
+
+      <div id='exploreDiv'>
+        <h2>Start your journey through the Midwest</h2>
+
+        <Link to="/explore" id='exploreButton'>Explore</Link>
+        
+      </div>
       </div>
     
       <div id='infoFlex'>

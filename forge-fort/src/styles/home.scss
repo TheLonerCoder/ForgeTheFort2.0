@@ -14,6 +14,7 @@
     max-width: 400px;
     background-color: $grey;
     min-width: 300px;
+    // min-width: 250px;
     margin-bottom: 20px;
     align-content: center;
     // margin-right: 100px;
@@ -61,7 +62,25 @@ h2 {
 
 #homeCara {
 
+    position: relative;
+
     // background-color: red;
+    
+    &:hover {
+        
+        // opacity: 50%;
+        
+        img {
+
+            filter: brightness(50%);
+        }
+
+
+        #exploreDiv {
+            display: inline;
+        }
+        
+    }
 
     img {
         width: 95%;
@@ -72,8 +91,51 @@ h2 {
         margin: 20px 20px 50px 20px;
         // padding: 0 20px;
         // box-shadow: 1px 5px 4px black;
+
         
     }
+
+
+    #exploreButton {
+        background-color: rgba($color: white, $alpha: 0);
+        border: 2px rgba($color: white, $alpha: 0.5) solid;
+        border-radius: 10px;
+        color: white;
+        
+
+        &:hover {
+            background-color: rgba($color: $orange, $alpha: 0.5);
+            
+        }
+
+    }
+}
+
+
+
+#exploreDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: none;
+    // width: 50%;
+
+    h2 {
+        // font-size: 2rem;
+        // font-weight: bold;
+        padding: 12px 10px;
+
+        background-color: rgba($color: $orange, $alpha: 0);
+        color: rgba($color: white, $alpha: 1);
+        text-align: center;
+        border-radius: 5px;
+
+        font-style: italic;
+        // margin-bottom: 10px;
+    }
+    
 }
 
 

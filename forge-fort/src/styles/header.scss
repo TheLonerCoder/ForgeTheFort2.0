@@ -50,6 +50,7 @@ a {
     font-weight: 400;
     
     &:hover {
+        
         color: $orange;
     }
 }
@@ -79,6 +80,7 @@ p {
 
     #headerListHamburger {
         display: inline-block;
+        z-index: 2;
         
 
 
