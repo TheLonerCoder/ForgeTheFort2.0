@@ -6,6 +6,10 @@ import styled, {keyframes} from 'styled-components';
 import {fadeIn, fadeInLeft, zoomIn} from 'react-animations';
 import { mapObject } from '../data/mapdata';
 import Howto from './howto';
+import {Doughnut} from 'react-chartjs-2';
+import {Chart, ArcElement, Tooltip, Legend} from 'chart.js';
+Chart.register(ArcElement, Tooltip, Legend);
+
 
 
 // ? Animations
@@ -41,14 +45,18 @@ function clearMap () {
 
 
 
-function Explore() {
 
+
+function Explore() {
+  
   const [mapContentVisibility, changeMapContentVisibility] = useState({display: 'none'});
   const [tutorialVisibility, changeTutorialVisibility] = useState();
   const [stateID, renderID] = useState();
   const [stateName, renderName] = useState('test');
   const [flag, changeFlag] = useState();
   const [cities, renderCity] = useState([]);
+  const [stateColor, changeColor] = useState('#e9565e');
+  const [stateGDP, changeGDP] = useState('')
   const mapRef = useRef(null);
   
   const mapColors = {
@@ -66,7 +74,18 @@ function Explore() {
     MN: '#7f4f99', 
   }
   
+
+  // ? Chart Data
+  const pieData = {
+      // labels: ["total", "nominal", "real"],
+      labels: ["Total Midwestern GDP", "State GDP (Nominal)"],
+      datasets: [{
+          data: [100, stateGDP],
+          backgroundColor: ['#aaaaaa', stateColor]
+      }]
+  }
   
+
   // ? Gets ID of clicked state and returns data
   function getIdClicked (e) {
 
@@ -89,6 +108,14 @@ function Explore() {
     renderCity(mapObject[theID].cities.largest);
     
     
+
+    // console.log(Object.keys(mapColors).find(theID));
+    changeColor(mapColors[theID]);
+    // ^ get colors of selected state
+
+
+    changeGDP(parseInt(mapObject[theID].gdp.total));
+    // ^ Converts GDP to single number (in billions)
 
   }
 
@@ -125,6 +152,9 @@ function Explore() {
       <div>Largest cities + hightlights</div>
       <div>Private investment</div>
       <div>GDP</div>
+      <Doughnut data={pieData}/>
+
+
       <div>Industries</div>
       <div></div>
     </FadeLeftDiv>
