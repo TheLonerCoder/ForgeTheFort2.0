@@ -7,9 +7,9 @@ import styled, {keyframes} from 'styled-components';
 import {fadeIn, fadeInLeft, zoomIn} from 'react-animations';
 import { mapObject } from '../data/mapdata';
 import Howto from './howto';
-import {Doughnut} from 'react-chartjs-2';
-import {Chart, ArcElement, Tooltip, Legend} from 'chart.js';
-Chart.register(ArcElement, Tooltip, Legend);
+import {Doughnut, Bar} from 'react-chartjs-2';
+import {Chart, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title} from 'chart.js';
+Chart.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title);
 
 
 
@@ -57,7 +57,8 @@ function Explore() {
   const [flag, changeFlag] = useState();
   const [cities, renderCity] = useState([]);
   const [stateColor, changeColor] = useState('#e9565e');
-  const [stateGDP, changeGDP] = useState('')
+  const [stateGDP, changeGDP] = useState('');
+  const [stateCapita, changeCapita] = useState('');
   const mapRef = useRef(null);
   
   const mapColors = {
@@ -88,10 +89,10 @@ function Explore() {
 
 const incomeData = {
       // labels: ["total", "nominal", "real"],
-      labels: ["Average Midwestern GDP/capita", "State GDP/capita (Nominal)"],
+      labels: ["Average Midwestern GDP/capita", "State GDP/capita (Nominal)", "National GDP/capita"],
       datasets: [{
-          data: [100, stateGDP],
-          backgroundColor: ['#aaaaaa', stateColor]
+          data: [100, stateCapita, 90],
+          backgroundColor: ['#aaaaaa', stateColor, '#c06014']
       }]
   }
   
@@ -126,6 +127,10 @@ const incomeData = {
 
     changeGDP(parseInt(mapObject[theID].gdp.total));
     // ^ Converts GDP to single number (in billions)
+
+
+    changeCapita(parseInt(mapObject[theID].gdp.capita));
+    // ^ Converts GDP/capita to single number (in billions)
 
   }
 
@@ -170,9 +175,13 @@ const incomeData = {
       {/* <div>Largest cities + hightlights</div> */}
       <div>Private investment</div>
       <div>GDP</div>
-      <div style={{width: '250px'}}>
-        <Doughnut data={pieData}/>
-        <Doughnut data={incomeData}/>
+      <div id="gdpCharts">
+        <div id='chart1'>
+          <Doughnut data={pieData}/>
+        </div>
+        <div id='chart2'>
+          <Bar data={incomeData}/>
+        </div>
       </div>
 
 
