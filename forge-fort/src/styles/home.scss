@@ -149,3 +149,26 @@ h2 {
     // background-color: blue;
     padding: 0 20px;
 }
+
+
+
+#cities {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    border-radius: 10px;
+    padding: 10px 0px;
+    color: white;
+
+    li {
+        display: block;
+        color: white;
+    }
+
+    #spotlight {
+        background-color: red;
+        width: 50%;
+    }
+}

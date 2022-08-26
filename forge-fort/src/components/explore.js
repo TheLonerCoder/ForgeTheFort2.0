@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 import MidwestMap from './MidwestMap';
 import '../styles/map.css';
 import '../styles/mapcontent.css';
+// import '../styles/exploreInfo.css';
 import styled, {keyframes} from 'styled-components';
 import {fadeIn, fadeInLeft, zoomIn} from 'react-animations';
 import { mapObject } from '../data/mapdata';
@@ -84,6 +85,15 @@ function Explore() {
           backgroundColor: ['#aaaaaa', stateColor]
       }]
   }
+
+const incomeData = {
+      // labels: ["total", "nominal", "real"],
+      labels: ["Average Midwestern GDP/capita", "State GDP/capita (Nominal)"],
+      datasets: [{
+          data: [100, stateGDP],
+          backgroundColor: ['#aaaaaa', stateColor]
+      }]
+  }
   
 
   // ? Gets ID of clicked state and returns data
@@ -119,6 +129,7 @@ function Explore() {
 
   }
 
+
   return (
     <FadeDiv id='explore'>
 
@@ -142,17 +153,27 @@ function Explore() {
     <FadeLeftDiv id='mapContent' style={mapContentVisibility}>
       {/* <div>ID: {stateID}</div> */}
 
-      <div>
-        <h3>Largest Cities</h3>
-        <ul>
-            {cities.map(item => {return <li>{item}</li>})}
-        </ul>
+      <div id='cities' style={{backgroundColor: stateColor}}>
+        <div>
+          <h3>Largest Cities</h3>
+          <ul>
+              {cities.map(item => {return <li><div>{item}</div></li>})}
+          </ul>
+        </div>
+
+        <div id='spotlight'>
+          <h3>Spotlight</h3>
+          {/* <h3>{mapObject[stateID].cities.upcoming.cityname}</h3> */}
+        </div>
       </div>
       
-      <div>Largest cities + hightlights</div>
+      {/* <div>Largest cities + hightlights</div> */}
       <div>Private investment</div>
       <div>GDP</div>
-      <Doughnut data={pieData}/>
+      <div style={{width: '250px'}}>
+        <Doughnut data={pieData}/>
+        <Doughnut data={incomeData}/>
+      </div>
 
 
       <div>Industries</div>
