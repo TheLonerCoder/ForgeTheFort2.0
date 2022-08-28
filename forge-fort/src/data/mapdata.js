@@ -33,7 +33,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '736,449.8',
-            capita: '62,517',
+            capita: '62517',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -79,7 +79,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '420,339.2',
-            capita: '61,760',
+            capita: '61760',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -126,7 +126,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '938,347.3',
-            capita: '74,052',
+            capita: '74052',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -173,7 +173,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '568,413.2',
-            capita: '56,554 ',
+            capita: '56554 ',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -220,7 +220,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '412,000.8',
-            capita: '72,187',
+            capita: '72187',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -267,7 +267,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '63,386.8',
-            capita: '81,795',
+            capita: '81795',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -314,7 +314,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '61,205.5 ',
-            capita: '68,357',
+            capita: '68357',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -361,7 +361,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '359,952.0',
-            capita: '58,356',
+            capita: '58356',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -408,7 +408,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '192,303.6',
-            capita: '65,530',
+            capita: '65530',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -455,7 +455,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '219,841.7',
-            capita: '68,849',
+            capita: '68849',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -502,7 +502,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '150,387.7',
-            capita: '76,584',
+            capita: '76584',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too
@@ -549,7 +549,7 @@ export const mapObject = {
         gdp: {
             // charts
             total: '365,931.3',
-            capita: '62,065',
+            capita: '62065',
         },
         industry: {
             // can use icons to represent industries. include where I got my info from too

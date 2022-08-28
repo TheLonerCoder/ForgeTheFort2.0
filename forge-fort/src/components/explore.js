@@ -59,6 +59,7 @@ function Explore() {
   const [stateColor, changeColor] = useState('#e9565e');
   const [stateGDP, changeGDP] = useState('');
   const [stateCapita, changeCapita] = useState('');
+  const [totalGDP, changeTotalGDP] = useState(0);
   const mapRef = useRef(null);
   
   const mapColors = {
@@ -77,24 +78,6 @@ function Explore() {
   }
   
 
-  // ? Chart Data
-  const pieData = {
-      // labels: ["total", "nominal", "real"],
-      labels: ["Total Midwestern GDP", "State GDP (Nominal)"],
-      datasets: [{
-          data: [100, stateGDP],
-          backgroundColor: ['#aaaaaa', stateColor]
-      }]
-  }
-
-const incomeData = {
-      // labels: ["total", "nominal", "real"],
-      labels: ["Average Midwestern GDP/capita", "State GDP/capita (Nominal)", "National GDP/capita"],
-      datasets: [{
-          data: [100, stateCapita, 90],
-          backgroundColor: ['#aaaaaa', stateColor, '#c06014']
-      }]
-  }
   
 
   // ? Gets ID of clicked state and returns data
@@ -129,10 +112,80 @@ const incomeData = {
     // ^ Converts GDP to single number (in billions)
 
 
-    changeCapita(parseInt(mapObject[theID].gdp.capita));
+    changeCapita(Number(mapObject[theID].gdp.capita));
     // ^ Converts GDP/capita to single number (in billions)
 
   }
+
+ 
+  
+  // ? Gets the average of the total GDP/capita
+let gdpArray = [];
+
+  for (const [key, value] of Object.entries(mapObject)) {
+  // console.log(`${key}: ${value}`);
+  let GDP = 0;
+
+  GDP = GDP + value;
+  // changeTotalGDP(totalGDP + value);
+  // changeTotalGDP(totalGDP + value);
+
+
+  gdpArray.push(Number(value.gdp.capita));
+  // console.log(`${value.gdp.capita}`);
+  // console.log(gdpArray);
+}
+const sumGDPCapita = gdpArray.reduce((previousGDP, currentGDP) => {return previousGDP + currentGDP}, 0)
+let averageGDPCapita = Math.round(sumGDPCapita / 12);
+
+
+
+
+
+ // ? Chart Data
+ const pieData = {
+  // labels: ["total", "nominal", "real"],
+  labels: ["Total Midwestern GDP", "State GDP (Nominal)"],
+  datasets: [{
+      data: [100, stateGDP],
+      backgroundColor: ['#aaaaaa', stateColor]
+  }]
+}
+
+
+
+
+const incomeData = {
+  // labels: ["total", "nominal", "real"],
+  labels: ["Average Midwestern GDP/capita", "State GDP/capita (Nominal)", "National GDP/capita"],
+  datasets: [{
+      data: [averageGDPCapita, stateCapita, 66144],
+      backgroundColor: ['#aaaaaa', stateColor, '#c06014']
+  }]
+}
+
+
+const totalOptions = {
+responsive: true,
+plugins: {
+title: {
+  display: true,
+  text: 'GDP (in $ billions)'
+}
+}
+}
+
+
+const capitaOptions = {
+responsive: true,
+plugins: {
+title: {
+  display: true,
+  text: 'GDP/capita ($)'
+}
+}
+}
+
 
 
   return (
@@ -173,20 +226,29 @@ const incomeData = {
       </div>
       
       {/* <div>Largest cities + hightlights</div> */}
-      <div>Private investment</div>
-      <div>GDP</div>
+
+      <div>
+        <h2 className='heading'>GDP</h2>
+      </div>
       <div id="gdpCharts">
         <div id='chart1'>
-          <Doughnut data={pieData}/>
+          <Doughnut data={pieData} options={totalOptions}/>
         </div>
         <div id='chart2'>
-          <Bar data={incomeData}/>
+          <Bar data={incomeData} options={capitaOptions}/>
         </div>
       </div>
 
+      <div>
+        <h2 className='heading'>
+          Private investment
+        </h2>
+      </div>
 
-      <div>Industries</div>
-      <div></div>
+      <div>
+        <h2 className='heading'>Industries</h2>
+      </div>
+      {/* <div></div> */}
     </FadeLeftDiv>
     </FadeDiv>
   )
