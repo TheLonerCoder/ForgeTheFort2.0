@@ -70,8 +70,8 @@
   background-color: #f3f4ed;
   width: 50%;
   color: #424642;
-  -webkit-box-shadow: 1px 1px 8px;
-          box-shadow: 1px 1px 8px;
+  -webkit-box-shadow: 1px 1px 8px black;
+          box-shadow: 1px 1px 8px black;
 }
 
 #cities #spotlight img {
@@ -128,5 +128,28 @@
   border-bottom: 1px solid white;
   padding: 5px 0;
   width: 100%;
+}
+
+#cityIcons {
+  margin: 0;
+  padding: 0;
+}
+
+#cityIcons ul {
+  background-color: rgba(192, 96, 20, 0.7);
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 3px 6px black;
+          box-shadow: 1px 3px 6px black;
+}
+
+#cityIcons li {
+  padding: 5px 5px;
+  margin: 0;
+  color: white;
+}
+
+#cityIcons li:hover {
+  color: #cccccc;
+  cursor: pointer;
 }
 /*# sourceMappingURL=mapcontent.css.map */

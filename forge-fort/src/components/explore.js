@@ -4,6 +4,7 @@ import '../styles/map.css';
 import '../styles/mapcontent.css';
 // import '../styles/exploreInfo.css';
 import styled, {keyframes} from 'styled-components';
+import { GiTreasureMap as Map, GiModernCity as City } from "react-icons/gi";
 import {fadeIn, fadeInLeft, zoomIn} from 'react-animations';
 import { mapObject } from '../data/mapdata';
 import Howto from './howto';
@@ -238,6 +239,14 @@ title: {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nisi, ipsam autem doloremque porro odio amet dicta accusamus quibusdam voluptatum aliquam minima animi blanditiis sunt natus, ratione dolores et consectetur?</p>
           </div>
           {/* <h3>{mapObject[stateID].cities.upcoming.cityname}</h3> */}
+        </div>
+
+        <div id='cityIcons'>
+          <ul>
+            <li><Map size={'1.5rem'}/></li>
+            <li><City size={'1.5rem'}/></li>
+            <li></li>
+          </ul>
         </div>
       </div>
       
