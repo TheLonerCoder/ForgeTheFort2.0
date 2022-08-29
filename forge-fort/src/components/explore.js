@@ -140,6 +140,17 @@ let averageGDPCapita = Math.round(sumGDPCapita / 12);
 
 
 
+// ? Gets average of the total midwestern GDP
+
+let totalgdpArray = [];
+
+  for (const [key, value] of Object.entries(mapObject)) {
+
+  totalgdpArray.push(Number(value.gdp.capita));
+  
+}
+
+
 
 
  // ? Chart Data
@@ -214,13 +225,18 @@ title: {
       <div id='cities' style={{backgroundColor: stateColor}}>
         <div>
           <h3>Largest Cities</h3>
-          <ul>
-              {cities.map(item => {return <li><div>{item}</div></li>})}
-          </ul>
+          <ol>
+              {cities.map(item => {return <li class='citiesItem'><div>{item}</div></li>})}
+          </ol>
         </div>
 
         <div id='spotlight'>
           <h3>Spotlight</h3>
+          <div>
+            <img src="https://dummyimage.com/300x200/000/fff.png&text=city" alt="placeholder" />
+            <h5 id='cityname'>City name, State</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nisi, ipsam autem doloremque porro odio amet dicta accusamus quibusdam voluptatum aliquam minima animi blanditiis sunt natus, ratione dolores et consectetur?</p>
+          </div>
           {/* <h3>{mapObject[stateID].cities.upcoming.cityname}</h3> */}
         </div>
       </div>
