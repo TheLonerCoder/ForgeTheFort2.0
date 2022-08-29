@@ -20,6 +20,10 @@ body {
       justify-content: space-around;
 }
 
+#headerList li {
+  font-family: "Quicksand", sans-serif;
+}
+
 .logoHeader {
   margin: 5px;
 }

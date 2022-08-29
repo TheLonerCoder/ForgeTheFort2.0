@@ -117,6 +117,8 @@
   padding: 15px 0;
   padding-left: 15px;
   border-radius: 5px;
+  -webkit-box-shadow: inset 1px 1px 5px #333333;
+          box-shadow: inset 1px 1px 5px #333333;
 }
 
 #explore ol li {
@@ -138,8 +140,9 @@
 #cityIcons ul {
   background-color: rgba(192, 96, 20, 0.7);
   border-radius: 2px;
-  -webkit-box-shadow: 1px 3px 6px black;
-          box-shadow: 1px 3px 6px black;
+  -webkit-box-shadow: 1px 3px 6px #333333;
+          box-shadow: 1px 3px 6px #333333;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 #cityIcons li {
@@ -151,5 +154,35 @@
 #cityIcons li:hover {
   color: #cccccc;
   cursor: pointer;
+}
+
+#cityIcons li svg {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+#cityIcons #mapIcon, #cityIcons #cityIcon {
+  background-color: rgba(192, 96, 20, 0.7);
+}
+
+#cityIcons #stockIcon {
+  background-color: rgba(0, 100, 0, 0.7);
+  border-radius: 2px;
+}
+
+#cityIcons #stockIcon:hover {
+  color: revert;
+  background-color: #00b300;
+}
+
+#cityIcons #bankIcon {
+  background-color: rgba(0, 0, 255, 0.7);
+  border-radius: 2px;
+  border-top: 1px solid #363636;
+}
+
+#cityIcons #bankIcon:hover {
+  color: revert;
+  background-color: #3333ff;
 }
 /*# sourceMappingURL=mapcontent.css.map */

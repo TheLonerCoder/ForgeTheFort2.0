@@ -128,6 +128,8 @@
         padding: 15px 0;
         padding-left: 15px;
         border-radius: 5px;
+        
+        box-shadow: inset 1px 1px 5px lighten($color: #000000, $amount: 20);
 
         li {
             text-align: left;
@@ -157,14 +159,16 @@
         // background-color: rgba($color: #000000, $alpha: 0.5);
         background-color: rgba($color: $orange, $alpha: 0.7);
         border-radius: 2px;
-        box-shadow: 1px 3px 6px black;
+        box-shadow: 1px 3px 6px lighten($color: #000000, $amount: 20);
         // background-color: white;
+        border: 1px solid rgba($color: white, $alpha: 0.4);
 
         
     }
 
 
     li {
+        // background-color: rgba($color: $orange, $alpha: 0.7);
         padding: 5px 5px;
         margin: 0;
         color: white;
@@ -173,6 +177,52 @@
             color: darken($color: white, $amount: 20);
             cursor: pointer;
         }
+
+
+        svg {
+            stroke: black;
+            stroke-width: 2px;
+        }
+    }
+
+
+    #mapIcon, #cityIcon {
+        background-color: rgba($color: $orange, $alpha: 0.7);
+
+    }
+
+
+    #stockIcon {
+        background-color: rgba($color: darkgreen, $alpha: 0.7);
+        border-radius: 2px;
+        // box-shadow: inset 1px 1px 2px black;
+
+        // border-radius: 100%;
+        // box-shadow: 1px 3px 6px lighten($color: #000000, $amount: 20);
+
+        &:hover {
+            color: revert;
+            background-color: lighten($color: green, $amount: 10);
+            
+    }  
+    }
+
+
+    #bankIcon {
+        background-color: rgba($color: blue, $alpha: 0.7);
+        border-radius: 2px;
+        // box-shadow: inset 2px 2px 3px black;
+
+        border-top: 1px solid darken($color: darkgrey, $amount: 45);
+        // border-left: 1px solid darken($color: darkgrey, $amount: 45);
+        // box-shadow: 1px 3px 6px lighten($color: #000000, $amount: 20);
+           
+           
+        &:hover {
+                color: revert;
+                background-color: lighten($color: blue, $amount: 10);
+        }  
+        
     }
 }
 

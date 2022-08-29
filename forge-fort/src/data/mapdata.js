@@ -313,7 +313,7 @@ export const mapObject = {
         investment: '',
         gdp: {
             // charts
-            total: '61,205.5 ',
+            total: '61,205.5',
             capita: '68357',
         },
         industry: {

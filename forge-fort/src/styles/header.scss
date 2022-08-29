@@ -16,6 +16,12 @@ body {
 }
 
 
+#headerList {
+    li {
+        font-family: $mainFont;
+    }
+}
+
 .logoHeader {
     // background-color: red;
     margin: 5px;

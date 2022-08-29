@@ -5,6 +5,7 @@ import '../styles/mapcontent.css';
 // import '../styles/exploreInfo.css';
 import styled, {keyframes} from 'styled-components';
 import { GiTreasureMap as Map, GiModernCity as City } from "react-icons/gi";
+import { AiOutlineStock as Stocks, AiFillBank as Bank } from "react-icons/ai";
 import {fadeIn, fadeInLeft, zoomIn} from 'react-animations';
 import { mapObject } from '../data/mapdata';
 import Howto from './howto';
@@ -58,6 +59,7 @@ function Explore() {
   const [flag, changeFlag] = useState();
   const [cities, renderCity] = useState([]);
   const [stateColor, changeColor] = useState('#e9565e');
+  const [iconStyle, changeIconStyle] = useState(null);
   const [stateGDP, changeGDP] = useState('');
   const [stateCapita, changeCapita] = useState('');
   const [totalGDP, changeTotalGDP] = useState(0);
@@ -136,7 +138,7 @@ let gdpArray = [];
   // console.log(`${value.gdp.capita}`);
   // console.log(gdpArray);
 }
-const sumGDPCapita = gdpArray.reduce((previousGDP, currentGDP) => {return previousGDP + currentGDP}, 0)
+const sumGDPCapita = gdpArray.reduce((previousGDP, currentGDP) => {return previousGDP + currentGDP}, 0);
 let averageGDPCapita = Math.round(sumGDPCapita / 12);
 
 
@@ -147,9 +149,11 @@ let totalgdpArray = [];
 
   for (const [key, value] of Object.entries(mapObject)) {
 
-  totalgdpArray.push(Number(value.gdp.capita));
+  totalgdpArray.push(parseInt(value.gdp.total));
   
 }
+const sumGDPTotal = totalgdpArray.reduce((previousGDP, currentGDP) => {return previousGDP + currentGDP}, 0);
+let averageGDPTotal = Math.round(sumGDPTotal/12);
 
 
 
@@ -159,7 +163,7 @@ let totalgdpArray = [];
   // labels: ["total", "nominal", "real"],
   labels: ["Total Midwestern GDP", "State GDP (Nominal)"],
   datasets: [{
-      data: [100, stateGDP],
+      data: [sumGDPTotal, stateGDP],
       backgroundColor: ['#aaaaaa', stateColor]
   }]
 }
@@ -170,10 +174,13 @@ let totalgdpArray = [];
 const incomeData = {
   // labels: ["total", "nominal", "real"],
   labels: ["Average Midwestern GDP/capita", "State GDP/capita (Nominal)", "National GDP/capita"],
-  datasets: [{
+  datasets: [
+    {
+      // label: ['Midwest Average, State, National Average'],
       data: [averageGDPCapita, stateCapita, 66144],
       backgroundColor: ['#aaaaaa', stateColor, '#c06014']
-  }]
+  },
+]
 }
 
 
@@ -191,12 +198,62 @@ title: {
 const capitaOptions = {
 responsive: true,
 plugins: {
+legend: {
+  display: false
+},
 title: {
   display: true,
   text: 'GDP/capita ($)'
 }
 }
 }
+
+
+
+// ? Change color of tab when button is clicked
+let backgroundGreen = {
+  // backgroundColor: 'darkgreen',
+  backgroundColor: 'rgba(0, 100, 0, 0.7)',
+
+}
+let backgroundBlue = {
+  backgroundColor: 'rgba(0, 0, 255, 0.7)',
+}
+let backgroundOrange = {
+  backgroundColor: 'rgba(192, 96, 20, 0.7)',
+}
+
+
+function changeBackgroundButton (e) {
+
+  let changeStyle = e.currentTarget.style;
+  changeStyle.boxShadow = 'none';      
+
+  switch (e.currentTarget.id) {
+    case 'mapIcon':
+    case 'cityIcon':  
+      // console.log('works');
+      changeIconStyle(changeStyle = backgroundOrange);
+      break;
+    case 'stockIcon':
+      changeIconStyle(changeStyle = backgroundGreen);
+      break;
+    case 'bankIcon':
+      changeIconStyle(changeStyle = backgroundBlue);
+      break;
+    default:
+      console.log('failure to change background color!')
+  };
+
+
+  // console.log(e.currentTarget.id);
+  
+
+  // changeIconStyle (e.currentTarget.style = backgroundGreen)
+}
+
+
+
 
 
 
@@ -242,10 +299,11 @@ title: {
         </div>
 
         <div id='cityIcons'>
-          <ul>
-            <li><Map size={'1.5rem'}/></li>
-            <li><City size={'1.5rem'}/></li>
-            <li></li>
+          <ul style={iconStyle}>
+            <li id='mapIcon' onClick={changeBackgroundButton}><Map size={'1.5rem'} /></li>
+            <li id='cityIcon' onClick={changeBackgroundButton}><City size={'1.5rem'} /></li>
+            <li id='stockIcon' onClick={changeBackgroundButton}><Stocks size={'1.5rem'}/></li>
+            <li id='bankIcon' onClick={changeBackgroundButton}><Bank size={'1.5rem'} /></li>
           </ul>
         </div>
       </div>
