@@ -57,7 +57,7 @@
 //   }
   
   
-  #cities {
+  .cities {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -76,6 +76,8 @@
         background-color: $backgroundColor;
         width: 50%;
         color: $grey;
+        min-width: 350px;
+        max-width: 550px;
         // box-shadow: 1px 1px 8px;
         box-shadow: 1px 1px 8px black;
 
@@ -119,7 +121,10 @@
     #chart1, #chart2 {
         display: inline-block;
         // max-width: 400px;
-        width: 50%;
+        width: 40%;
+        min-height: 550px;
+        height: 50vh;
+        // background-color: burlywood;
     }
 
     ol {
@@ -145,6 +150,11 @@
             padding: 5px 0;
             width: 100%;
         }
+    }
+
+
+    #gdpCharts {
+        background-color: burlywood;
     }
 }
 

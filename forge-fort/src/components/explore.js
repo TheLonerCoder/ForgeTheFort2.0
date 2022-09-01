@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 import MidwestMap from './MidwestMap';
 import '../styles/map.css';
 import '../styles/mapcontent.css';
+import { Link, Navigate, Route, Routes } from 'react-router-dom';
 // import '../styles/exploreInfo.css';
 import styled, {keyframes} from 'styled-components';
 import { GiTreasureMap as Map, GiModernCity as City } from "react-icons/gi";
@@ -13,6 +14,19 @@ import {Doughnut, Bar} from 'react-chartjs-2';
 import {Chart, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title} from 'chart.js';
 Chart.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title);
 
+
+
+// ? Styled Component
+const PaperDiv = styled.div `
+    background-color: white;
+    width: 50%;
+    min-height: 400px;
+    ${'' /* box-shadow: inset 0px 1px 3px black; */}
+    box-shadow: -4px -2px 8px grey;
+    ${'' /* margin-right: 5px; */}
+    ${'' /* border-left: 1px solid black; */}
+    ${'' /* border-left: 4px 5px solid darkgrey; */}
+`
 
 
 // ? Animations
@@ -46,6 +60,35 @@ function clearMap () {
 }
 
 
+
+function Test1 () {
+  return (
+    <div>
+      Test1
+    </div>
+  )
+}
+function Test2 () {
+  return (
+    <div>
+      Test2
+    </div>
+  )
+}
+function Test3 () {
+  return (
+    <div>
+      Test3
+    </div>
+  )
+}
+function Test4 () {
+  return (
+    <div>
+      Test4
+    </div>
+  )
+}
 
 
 
@@ -280,7 +323,14 @@ function changeBackgroundButton (e) {
     <FadeLeftDiv id='mapContent' style={mapContentVisibility}>
       {/* <div>ID: {stateID}</div> */}
 
-      <div id='cities' style={{backgroundColor: stateColor}}>
+      {/* <Routes>
+        <Route path='map' element={<Test1/>}></Route>
+        <Route path='city' element={<Test2/>}></Route>
+        <Route path='stock' element={<Test3/>}></Route>
+        <Route path='bank' element={<Test4/>}></Route>
+      </Routes> */}
+
+      <div className='cities' style={{backgroundColor: stateColor}}>
         <div>
           <h3>Largest Cities</h3>
           <ol>
@@ -296,14 +346,16 @@ function changeBackgroundButton (e) {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nisi, ipsam autem doloremque porro odio amet dicta accusamus quibusdam voluptatum aliquam minima animi blanditiis sunt natus, ratione dolores et consectetur?</p>
           </div>
           {/* <h3>{mapObject[stateID].cities.upcoming.cityname}</h3> */}
+
+          
         </div>
 
         <div id='cityIcons'>
           <ul style={iconStyle}>
-            <li id='mapIcon' onClick={changeBackgroundButton}><Map size={'1.5rem'} /></li>
-            <li id='cityIcon' onClick={changeBackgroundButton}><City size={'1.5rem'} /></li>
-            <li id='stockIcon' onClick={changeBackgroundButton}><Stocks size={'1.5rem'}/></li>
-            <li id='bankIcon' onClick={changeBackgroundButton}><Bank size={'1.5rem'} /></li>
+            <li id='mapIcon' onClick={changeBackgroundButton}><button><Map size={'1.5rem'} /></button></li>
+            <li id='cityIcon' onClick={changeBackgroundButton}><button><City size={'1.5rem'} /></button></li>
+            <li id='stockIcon' onClick={changeBackgroundButton}><button><Stocks size={'1.5rem'}/></button></li>
+            <li id='bankIcon' onClick={changeBackgroundButton}><button><Bank size={'1.5rem'} /></button></li>
           </ul>
         </div>
       </div>
@@ -313,13 +365,13 @@ function changeBackgroundButton (e) {
       <div>
         <h2 className='heading'>GDP</h2>
       </div>
-      <div id="gdpCharts">
-        <div id='chart1'>
+      <div id="gdpCharts" className='cities'>
+        <PaperDiv id='chart1'>
           <Doughnut data={pieData} options={totalOptions}/>
-        </div>
-        <div id='chart2'>
+        </PaperDiv>
+        <PaperDiv id='chart2'>
           <Bar data={incomeData} options={capitaOptions}/>
-        </div>
+        </PaperDiv>
       </div>
 
       <div>

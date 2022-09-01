@@ -43,7 +43,7 @@
   width: 100%;
 }
 
-#cities {
+.cities {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,29 +61,31 @@
   color: white;
 }
 
-#cities li {
+.cities li {
   display: block;
   color: white;
 }
 
-#cities #spotlight {
+.cities #spotlight {
   background-color: #f3f4ed;
   width: 50%;
   color: #424642;
+  min-width: 350px;
+  max-width: 550px;
   -webkit-box-shadow: 1px 1px 8px black;
           box-shadow: 1px 1px 8px black;
 }
 
-#cities #spotlight img {
+.cities #spotlight img {
   width: 80%;
 }
 
-#cities #spotlight p {
+.cities #spotlight p {
   padding: 10px;
   text-indent: 10px;
 }
 
-#cities #spotlight #cityname {
+.cities #spotlight #cityname {
   text-align: right;
   padding-right: 40px;
 }
@@ -108,7 +110,9 @@
 
 #explore #chart1, #explore #chart2 {
   display: inline-block;
-  width: 50%;
+  width: 40%;
+  min-height: 550px;
+  height: 50vh;
 }
 
 #explore ol {
@@ -130,6 +134,10 @@
   border-bottom: 1px solid white;
   padding: 5px 0;
   width: 100%;
+}
+
+#explore #gdpCharts {
+  background-color: burlywood;
 }
 
 #cityIcons {
