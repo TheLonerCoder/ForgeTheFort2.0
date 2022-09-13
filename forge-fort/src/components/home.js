@@ -5,9 +5,35 @@ import {fadeIn} from 'react-animations';
 import { Link } from 'react-router-dom';
 import Testchart from '../charts/testchart';
 import { Doughnut } from 'react-chartjs-2';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
+const images = {
+  alt: 'Image load failed',
+  width: "95%",
+  minWidth: "100px",
+  maxWidth: "1250px",
+  margin: 'margin: 20px 20px 50px 20px'
 
+}
+
+
+const MyImage = ( image ) => {
+  return (
+    <div>
+      <LazyLoadImage
+        alt={images.alt}
+        effect="blur"
+        height={images.height}
+        src={image} // use normal <img> attributes as props
+        width={images.width} 
+        style={images}
+        />
+      {/* <span>{image.caption}</span> */}
+    </div>
+
+  )
+  };
 
 
 
@@ -15,7 +41,6 @@ import { Doughnut } from 'react-chartjs-2';
 
 const InfoImages = styled.img `
   width: 100%;
-
 
 `
 
@@ -29,8 +54,6 @@ const FadeDiv = styled.div `
 
 
 
-
-
 function Home() {
   return (
     <FadeDiv>
@@ -38,10 +61,11 @@ function Home() {
 
         {/* <h1>Test</h1> */}
 
-    
+      {/* { MyImage('ForgeTheFort2.0/imgs/Unknown/skyline.jpg') }     */}
 
       <div id='homeCara'>
-        <img src="ForgeTheFort2.0/imgs/Unknown/skyline.jpg" alt="skyline FW" id='mainImage'/>
+        {/* <img src="ForgeTheFort2.0/imgs/Unknown/skyline.jpg" alt="skyline FW" id='mainImage'/> */}
+        { MyImage('ForgeTheFort2.0/imgs/Unknown/skyline.jpg') }    
 
       <div id='exploreDiv'>
         <h2>Start your journey through the Midwest</h2>

@@ -84,6 +84,10 @@ p {
         display: none;
     }
 
+    #headerNav {
+         position: relative;
+    }
+
     #headerListHamburger {
         display: inline-block;
         z-index: 2;
@@ -131,6 +135,7 @@ p {
 
         #hamDiv {
             position: absolute;
+            right: 0px;
             border-radius: 50px;
 
         }

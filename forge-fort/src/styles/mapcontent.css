@@ -111,8 +111,6 @@
 #explore #chart1, #explore #chart2 {
   display: inline-block;
   width: 40%;
-  min-height: 550px;
-  height: 50vh;
 }
 
 #explore ol {
@@ -134,10 +132,6 @@
   border-bottom: 1px solid white;
   padding: 5px 0;
   width: 100%;
-}
-
-#explore #gdpCharts {
-  background-color: burlywood;
 }
 
 #cityIcons {

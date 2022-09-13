@@ -22,7 +22,9 @@ const PaperDiv = styled.div `
     width: 50%;
     min-height: 400px;
     ${'' /* box-shadow: inset 0px 1px 3px black; */}
-    box-shadow: -4px -2px 8px grey;
+
+    ${'' /* box-shadow: -4px -2px 8px grey; */}
+    
     ${'' /* margin-right: 5px; */}
     ${'' /* border-left: 1px solid black; */}
     ${'' /* border-left: 4px 5px solid darkgrey; */}
