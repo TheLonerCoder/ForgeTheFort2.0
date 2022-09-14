@@ -7,6 +7,10 @@
 // }
 
 
+#homeDiv {
+    overflow-x: hidden;
+}
+
 .infoDiv {
 
     // height: 300px;
@@ -63,6 +67,7 @@ h2 {
 #homeCara {
 
     position: relative;
+    width: 100vw;
 
     // background-color: red;
     
@@ -88,7 +93,7 @@ h2 {
         max-width: 1250px;
         // margin-top: 20px;
         // margin-bottom: 50px; 
-        margin: 20px 20px 50px 20px;
+        margin: 20px 0px 50px 0px;
         // padding: 0 20px;
         // box-shadow: 1px 5px 4px black;
 
@@ -154,13 +159,36 @@ h2 {
 
 // ! Media Queries
 
-@media (max-width: 616px) {
+@media (max-width: 620px) {
 
     // #homeDiv {
     //     background-color: red;
     // }
 
+    // #homeCare {
+
+    // }
+
+    #exploreDiv {
+        display: inline;
+
+
+        #exploreButton {
+            background-color: rgba($color: black, $alpha: 0.4);
+        }
+
+    }
+
     #startJourney {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
+        width: 100%;
+        margin-bottom: 15px;
+        // color: black;
+        // padding: 0;
+        
+        #journeySpan {
+            
+            background: rgba($color: $orange, $alpha: 0.6); 
+        }
     }
 }

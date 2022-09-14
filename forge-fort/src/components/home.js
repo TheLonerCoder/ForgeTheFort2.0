@@ -11,10 +11,10 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const images = {
   alt: 'Image load failed',
-  width: "95%",
+  width: "100%",
   minWidth: "100px",
   maxWidth: "1250px",
-  margin: 'margin: 20px 20px 50px 20px'
+  // margin: '20px 20px 50px 20px'
 
 }
 
@@ -97,7 +97,7 @@ function Home() {
         { MyImage('ForgeTheFort2.0/imgs/Unknown/skyline.jpg') }    
 
       <div id='exploreDiv'>
-        <h2 id='startJourney'>Start your journey through the Midwest</h2>
+        <h2 id='startJourney'><span id='journeySpan'> Start your journey through the Midwest</span></h2>
 
         <Link to="/explore" id='exploreButton'>Explore</Link>
         
