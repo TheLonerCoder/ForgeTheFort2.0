@@ -152,3 +152,15 @@ h2 {
 
 
 
+// ! Media Queries
+
+@media (max-width: 616px) {
+
+    // #homeDiv {
+    //     background-color: red;
+    // }
+
+    #startJourney {
+        font-size: 0.75rem;
+    }
+}

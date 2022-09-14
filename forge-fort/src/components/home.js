@@ -85,7 +85,7 @@ const FadeDiv = styled.div `
 
 function Home() {
   return (
-    <FadeDiv>
+    <FadeDiv id='homeDiv'>
         
 
         {/* <h1>Test</h1> */}
@@ -97,7 +97,7 @@ function Home() {
         { MyImage('ForgeTheFort2.0/imgs/Unknown/skyline.jpg') }    
 
       <div id='exploreDiv'>
-        <h2>Start your journey through the Midwest</h2>
+        <h2 id='startJourney'>Start your journey through the Midwest</h2>
 
         <Link to="/explore" id='exploreButton'>Explore</Link>
         
