@@ -2,6 +2,39 @@ import React from 'react';
 import styled, {keyframes} from 'styled-components';
 import '../styles/contact.css'
 import {fadeIn} from 'react-animations';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+
+const images = {
+  alt: 'Image load failed',
+  // width: "100%",
+  // minWidth: "100px",
+  maxWidth: "30vh",
+  display: 'inline-block',
+  padding: "0 12px"
+  // margin: 'margin: 20px 20px 50px 20px'
+
+}
+
+
+const MyImage = ( image ) => {
+  return (
+    <div>
+      <LazyLoadImage
+        alt={images.alt}
+        effect="blur"
+        height={images.height}
+        src={image} // use normal <img> attributes as props
+        width={images.width} 
+        style={images}
+        placeholderSrc={image}
+        />
+      {/* <span>{image.caption}</span> */}
+    </div>
+
+  )
+  };
 
 
 // ? Animations
@@ -18,7 +51,8 @@ function Contact() {
   return (
     <FadeDiv>
         <div id="founderFlex">
-          <img src="ForgeTheFort2.0/imgs/Unknown/portrait-edit.png" alt="potrait" id='portrait'/>
+          {/* <img src="ForgeTheFort2.0/imgs/Unknown/portrait-edit.png" alt="potrait" id='portrait'/> */}
+          {MyImage('ForgeTheFort2.0/imgs/Unknown/portrait-edit.png')}
           <div id="test">
 
           <h1>Meet the founder</h1>
@@ -38,8 +72,8 @@ function Contact() {
             <h3>Goals</h3>
             <p>I'll have regularly updates on what I plan on doing on Youtube and on here. They include, but are not limited to:</p>
             <ol>
-              <li>1. Updating the "Explore", "Blog", and "Resources" pages</li>
-              <li>2. Add more funtionality to the home page. For example, I want a feature where when you hover on the bottom cards, they expand with more information and links</li>
+              <li>1. Updating the "Explore", "Blog", and "Resources" pages ✔️</li>
+              <li>2. Add more funtionality to the home page. For example, I want a feature where when you hover on the bottom cards, they expand with more information and links ✔️</li>
               <li>3. Adding detailed plans to this page (like pictures)</li>
               <li>4. Incoporate versions ✔️</li>
               <li>5. Host the website with a domain name ✔️</li>
