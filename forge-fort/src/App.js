@@ -9,7 +9,9 @@ import './styles/header.css';
 import { GiFlatHammer as Ham1, GiGearHammer as Ham2, GiHammerBreak as Ham3, Gi3DHammer as Ham4} from "react-icons/gi";
 import styled, { keyframes } from 'styled-components';
 import { bounce, rollIn, slideOutDown } from 'react-animations'
-import { IoCloseOutline as Exit1, IoClose as Exit2, IoMenuOutline as Menu1, IoMenu as Menu2 } from "react-icons/io5";;
+import { IoCloseOutline as Exit1, IoClose as Exit2, IoMenuOutline as Menu1, IoMenu as Menu2 } from "react-icons/io5";
+import { BsFillArrowUpSquareFill as UpIcon } from "react-icons/bs";
+import {Link as ScrollLink} from 'react-scroll';
 
 
 // ? Animations
@@ -48,6 +50,10 @@ function App() {
   return (
     <div className="App">
         <nav id='headerNav'>
+          
+            {/* <div id='arrowItem'><ScrollLink to='logoHeader' smooth={true} offset={0} duration={500}><UpIcon /> </ScrollLink> </div> */}
+          
+
           <div class="logoHeader">
             {/* <h1> Forge the Fort</h1> */}
             <h1> F<BouncyDiv><Ham2 style={{position: 'relative', top: '5px', right: '2px'}} fill="#c06014"/></BouncyDiv>rge the Fort</h1>
@@ -87,6 +93,8 @@ function App() {
           </ul>
         </nav>
 
+        <ul id='arrowItem'><li><ScrollLink to='logoHeader' smooth={true} offset={0} duration={500}>
+        <UpIcon size={30}/> </ScrollLink></li> </ul>
 
         <Routes>
           <Route path='/home' element={<Home />}/>

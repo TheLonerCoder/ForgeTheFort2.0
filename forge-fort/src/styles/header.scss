@@ -16,6 +16,21 @@ body {
 }
 
 
+#arrowItem {
+    // display: inline;
+    // display: none;
+    visibility: hidden;
+    // position: sticky;
+    // position: sticky;
+    // bottom: 50%;
+    // left: 100px;
+    // bottom: 50%;
+
+    svg {
+        color: $grey;
+    }
+}
+
 #headerList {
     li {
         font-family: $mainFont;
@@ -137,6 +152,38 @@ p {
             position: absolute;
             right: 0px;
             border-radius: 50px;
+
+        }
+    }
+
+
+
+    #arrowItem {
+        visibility: visible;
+        position: sticky;
+        top: 50vh;
+        // left: 20px;
+        z-index: 2;
+
+        li {
+            position: absolute;
+            left: 0px;
+            top: 100px;
+            // left: 0px;
+            text-align: left;
+            // top: 50%;
+        }
+
+
+
+        svg {
+            color: rgba($color: $orange, $alpha: 0.7);
+            text-align: left;
+
+            &:hover {
+                all: revert;
+                fill: rgba($color: black, $alpha: 0.25);
+            }
 
         }
     }

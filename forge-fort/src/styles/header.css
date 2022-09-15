@@ -20,6 +20,14 @@ body {
       justify-content: space-around;
 }
 
+#arrowItem {
+  visibility: hidden;
+}
+
+#arrowItem svg {
+  color: #424642;
+}
+
 #headerList li {
   font-family: "Quicksand", sans-serif;
 }
@@ -106,6 +114,27 @@ p {
     position: absolute;
     right: 0px;
     border-radius: 50px;
+  }
+  #arrowItem {
+    visibility: visible;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50vh;
+    z-index: 2;
+  }
+  #arrowItem li {
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    text-align: left;
+  }
+  #arrowItem svg {
+    color: rgba(192, 96, 20, 0.7);
+    text-align: left;
+  }
+  #arrowItem svg:hover {
+    all: revert;
+    fill: rgba(0, 0, 0, 0.25);
   }
 }
 /*# sourceMappingURL=header.css.map */
