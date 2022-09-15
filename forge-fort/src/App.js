@@ -45,7 +45,9 @@ function App() {
 
   }
 
-
+  function hideDropDown (e) {
+    changeMenu ({display: 'none'})
+  }
 
   return (
     <div className="App">
@@ -81,13 +83,13 @@ function App() {
 
             <div style={menu} id="hamDiv">
               <li>
-                <Link to="/home">Home</Link>
+                <Link to="/home" onClick={hideDropDown}>Home</Link>
               </li>
               <li>
-                <Link to="/explore">Explore</Link>
+                <Link to="/explore" onClick={hideDropDown}>Explore</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/about" onClick={hideDropDown}>About</Link>
               </li>
             </div>
           </ul>
