@@ -125,5 +125,8 @@ h2 {
   #startJourney #journeySpan {
     background: rgba(192, 96, 20, 0.6);
   }
+  .infoDiv {
+    margin-left: 14px;
+  }
 }
 /*# sourceMappingURL=home.css.map */
