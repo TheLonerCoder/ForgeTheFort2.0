@@ -7,6 +7,7 @@ import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import styled, {keyframes} from 'styled-components';
 import { GiTreasureMap as Map, GiModernCity as City } from "react-icons/gi";
 import { AiOutlineStock as Stocks, AiFillBank as Bank } from "react-icons/ai";
+import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 import {fadeIn, fadeInLeft, zoomIn} from 'react-animations';
 import { mapObject } from '../data/mapdata';
 import Howto from './howto';
@@ -386,6 +387,19 @@ function changeBackgroundButton (e) {
         <h2 className='heading'>Industries</h2>
       </div>
       {/* <div></div> */}
+
+      <div id='arrowMapDiv'>
+        <ul>
+          <li id='arrowUp'>
+            <h4>MAP</h4>
+            <BsArrowUp size={25}/>
+          </li>
+          <li id='arrowDown'>
+            <BsArrowDown size={25}/>
+            <h4>INFO</h4>
+          </li>
+        </ul>
+      </div>
     </FadeLeftDiv>
     </FadeDiv>
   )

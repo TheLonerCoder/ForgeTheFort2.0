@@ -108,7 +108,7 @@ function Home() {
         <div className='infoDiv'>
           {/* <InfoImages src="ForgeTheFort2.0/imgs/Unknown/education.jpg" alt='education'/> */}
           {LazyImages('ForgeTheFort2.0/imgs/Unknown/education.jpg')}
-          <h2>Education</h2>
+          <h2 id='education'>Education</h2>
           <p>Here, at <i>Forge the Fort </i>, we believe education is a key fundamental into creating thriving economies and entrepreneurial ecosystems. We've partnered with other institutions and organizations to bring you the best education for your specific needs.</p>
             
         </div>

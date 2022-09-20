@@ -237,3 +237,36 @@
     }
 }
 
+
+#arrowMapDiv {
+
+    display: none;
+    h4 {
+        color: $grey;
+    }
+
+    svg {
+        background-color: red;
+
+
+        &:hover {
+            color: lighten($color: #000000, $amount: 20);
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+
+
+        #arrowUp {
+            margin-bottom: 20px;
+            width: 38.15px;
+        }
+    }
+}
