@@ -153,11 +153,61 @@ h2 {
     // justify-content: space-evenly;
     // background-color: blue;
     padding: 0 20px;
+
+    
 }
 
 
 
 // ! Media Queries
+
+@media (max-width: 1080px) {
+    #homeDiv {
+        overflow-x: hidden;
+    }
+
+    #infoFlex {
+        overflow-x: hidden;
+    }
+}
+
+
+@media (max-width: 950px) {
+    #div3 {
+        flex-grow: 3;
+    }
+
+    #homeDiv {
+        overflow-x: hidden;
+
+    }
+
+    #infoFlex {
+        overflow-x: hidden;
+    }
+}
+
+
+@media (max-width: 680px) {
+    #div3 {
+        flex-grow: 0;
+    }
+
+    #infoFlex {
+        &>div {
+            margin-left: 20px;
+            margin-right: 20px;
+            flex-grow: 3;
+        }
+
+        // #div3 {
+        //     flex-grow: 0;
+        // }
+    }
+
+
+}
+
 
 @media (max-width: 620px) {
 
@@ -168,6 +218,20 @@ h2 {
     // #homeCare {
 
     // }
+
+    #infoFlex {
+        &>div {
+            margin-left: 20px;
+            margin-right: 20px;
+            flex-grow: 3;
+        }
+
+        // #div3 {
+        //     flex-grow: 0;
+        // }
+    }
+
+
 
     #exploreDiv {
         display: inline;

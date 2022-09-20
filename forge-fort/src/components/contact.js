@@ -70,7 +70,7 @@ function Contact() {
 
           <div id='goals'>
             <h3>Goals</h3>
-            <p>I'll have regularly updates on what I plan on doing on Youtube and on here. They include, but are not limited to:</p>
+            <p>I'll regularly have updates on what I plan on doing on Youtube and on here. They include, but are not limited to:</p>
             <ol>
               <li>1. Updating the "Explore", "Blog", and "Resources" pages ✔️</li>
               <li>2. Add more funtionality to the home page. For example, I want a feature where when you hover on the bottom cards, they expand with more information and links ✔️</li>

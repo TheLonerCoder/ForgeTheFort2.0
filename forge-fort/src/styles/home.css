@@ -110,7 +110,52 @@ h2 {
   padding: 0 20px;
 }
 
+@media (max-width: 1080px) {
+  #homeDiv {
+    overflow-x: hidden;
+  }
+  #infoFlex {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 950px) {
+  #div3 {
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+  }
+  #homeDiv {
+    overflow-x: hidden;
+  }
+  #infoFlex {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 680px) {
+  #div3 {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  #infoFlex > div {
+    margin-left: 20px;
+    margin-right: 20px;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+  }
+}
+
 @media (max-width: 620px) {
+  #infoFlex > div {
+    margin-left: 20px;
+    margin-right: 20px;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+  }
   #exploreDiv {
     display: inline;
   }
