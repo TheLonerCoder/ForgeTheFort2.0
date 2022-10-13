@@ -342,8 +342,12 @@ function changeBackgroundButton (e) {
           </ol>
         </div>
 
-
-        <Spotlight />
+        <div id='spotlight'>
+          {/* <Spotlight /> */}
+          <Routes>
+            <Route path=':spotlight' element={<Spotlight />} />
+          </Routes>
+        </div>
 
 
         <div id='cityIcons'>

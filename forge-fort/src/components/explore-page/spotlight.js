@@ -2,7 +2,7 @@ import React from 'react'
 
 function Spotlight() {
   return (
-    <div id='spotlight'>
+    <div>
         <h3>Spotlight</h3>
         <div>
         <img src="https://dummyimage.com/300x200/000/fff.png&text=city" alt="placeholder" />
