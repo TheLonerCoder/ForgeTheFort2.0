@@ -12,6 +12,8 @@ import { bounce, rollIn, slideOutDown } from 'react-animations'
 import { IoCloseOutline as Exit1, IoClose as Exit2, IoMenuOutline as Menu1, IoMenu as Menu2 } from "react-icons/io5";
 import { BsFillArrowUpSquareFill as UpIcon } from "react-icons/bs";
 import {Link as ScrollLink} from 'react-scroll';
+import Spotlight from './components/explore-page/spotlight';
+import TestMap from './components/explore-page/map';
 
 
 // ? Animations
@@ -101,7 +103,12 @@ function App() {
         <Routes>
           <Route path='/home' element={<Home />}/>
           <Route path='/about' element={<Contact />}/>
-          <Route path='/explore' element={<Explore />}/>
+          <Route path='/explore' element={<Explore />}>
+            <Route path='spotlight' element={<Spotlight />}/>
+            <Route path='map' element={<TestMap />}/>
+            <Route path='gdp-data' element={<TestMap />}/>
+            <Route path='*' element={<Navigate to='spotlight'/>}/>
+          </Route>
           {/* <Route path="*" element={<Home />}/> */}
           <Route path='*' element={<Navigate to='/home'/>}/>
         </Routes>

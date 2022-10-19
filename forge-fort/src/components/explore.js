@@ -2,7 +2,8 @@ import React, { useState, useRef } from 'react'
 import MidwestMap from './MidwestMap';
 import '../styles/map.css';
 import '../styles/mapcontent.css';
-import { Link, Navigate, Route, Routes } from 'react-router-dom';
+// import '../../../dist/css/mapcontent.css';
+import { Link, Navigate, Route, Routes, Outlet } from 'react-router-dom';
 // import '../styles/exploreInfo.css';
 import styled, {keyframes} from 'styled-components';
 import { GiTreasureMap as Map, GiModernCity as City } from "react-icons/gi";
@@ -14,6 +15,7 @@ import Howto from './howto';
 import {Doughnut, Bar} from 'react-chartjs-2';
 import {Chart, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title} from 'chart.js';
 import Spotlight from './explore-page/spotlight';
+import TestMap from './explore-page/map';
 Chart.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title);
 
 
@@ -343,19 +345,22 @@ function changeBackgroundButton (e) {
         </div>
 
         <div id='spotlight'>
+          <Outlet />
           {/* <Spotlight /> */}
-          <Routes>
-            <Route path=':spotlight' element={<Spotlight />} />
-          </Routes>
+          
+          {/* <Routes>
+            <Route path='#test1' element={<Spotlight />} />
+            <Route path='#test2' element={<TestMap />} />
+          </Routes> */}
         </div>
 
 
         <div id='cityIcons'>
           <ul style={iconStyle}>
-            <li id='mapIcon' onClick={changeBackgroundButton}><button><Map size={'1.5rem'} /></button></li>
-            <li id='cityIcon' onClick={changeBackgroundButton}><button><City size={'1.5rem'} /></button></li>
-            <li id='stockIcon' onClick={changeBackgroundButton}><button><Stocks size={'1.5rem'}/></button></li>
-            <li id='bankIcon' onClick={changeBackgroundButton}><button><Bank size={'1.5rem'} /></button></li>
+            <li id='mapIcon' onClick={changeBackgroundButton} title='map'><Link to='map' className='iconWhite'><Map size={'1.5rem'} /></Link></li>
+            <li id='cityIcon' onClick={changeBackgroundButton} title='city spotlight'><Link to='spotlight' className='iconWhite'><City size={'1.5rem'} /></Link></li>
+            <li id='stockIcon' onClick={changeBackgroundButton} title='GDP'><Link to='gdp-data' className='iconWhite'><Stocks size={'1.5rem'}/></Link></li>
+            <li id='bankIcon' onClick={changeBackgroundButton} title='investment'><Bank size={'1.5rem'} /></li>
           </ul>
         </div>
       </div>
@@ -400,6 +405,11 @@ function changeBackgroundButton (e) {
     </FadeLeftDiv>
     </FadeDiv>
   )
+}
+
+
+function DataCharts () {
+
 }
 
 export default Explore;
